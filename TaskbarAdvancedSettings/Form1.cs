@@ -129,6 +129,7 @@ namespace TaskbarAdvancedSettings
 
             this.Width = 980;
             this.Height = 650;
+            this.CenterToScreen();
 
             panel15.BackColor = ColorTranslator.FromHtml("#eaeaea");
 
@@ -137,9 +138,6 @@ namespace TaskbarAdvancedSettings
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            this.VerticalScroll.Value = 0;
-            //taskbarSettingsPanel.VerticalScroll.Value = 0;
-
             formShown = true;
         }
 
@@ -198,12 +196,14 @@ namespace TaskbarAdvancedSettings
             {
                 taskbarStyle_lbl.Text = "On";
                 taskbarStyle_btn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOnStateDisabled : Properties.Resources.switchOnState;
+                pictureBox1.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
 
                 startMenuSunValleyLbl.Text = "On";
                 startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOnStateDisabled;
 
                 legacyTaskbarLbl.Text = "Off";
                 legacyTaskbarBtn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
+                pictureBox13.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winLegacyDisabled : Properties.Resources.winLegacy;
 
                 legacyContextMenuLbl.Text = "Off";
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOffStateDisabled;
@@ -215,12 +215,14 @@ namespace TaskbarAdvancedSettings
             {
                 taskbarStyle_lbl.Text = "Off";
                 taskbarStyle_btn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
+                pictureBox1.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
 
                 startMenuSunValleyLbl.Text = "Off";
                 startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOffStateDisabled;
 
                 legacyTaskbarLbl.Text = "On";
                 legacyTaskbarBtn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOnStateDisabled : Properties.Resources.switchOnState;
+                pictureBox13.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winLegacyDisabled : Properties.Resources.winLegacy;
 
                 legacyContextMenuLbl.Text = "On";
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOnStateDisabled;
