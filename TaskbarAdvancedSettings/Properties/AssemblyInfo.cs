@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Advanced Settings")]
-[assembly: AssemblyDescription("Enables or disables explorer legacy options in Windows 11")]
+[assembly: AssemblyDescription("Wrapper for registry value changes modifying behavior and look of Windows Taskbar and Windows Start menu")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("KRtkovo.eu, Ondřej Kotas")]
 [assembly: AssemblyProduct("Advanced Settings")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("11.0.1.1008")]
-[assembly: AssemblyFileVersion("11.0.1.1008")]
+[assembly: AssemblyVersion("11.0.1.1010")]
+[assembly: AssemblyFileVersion("11.0.1.1010")]
