@@ -177,18 +177,18 @@ namespace TaskbarAdvancedSettings
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.behaviorsPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.behaviorsPanelTaskbarLocation = new System.Windows.Forms.Panel();
             this.taskbarPositionComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.behaviorsPanelLock = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.lockTaskbarBtn = new System.Windows.Forms.Button();
             this.lockTaskbarLbl = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.behaviorsPanelSmallButtons = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.smallButtonsBtn = new System.Windows.Forms.Button();
             this.smallButtonsLbl = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.behaviorsPanelCombineButtons = new System.Windows.Forms.Panel();
             this.taskbarButtonsCombineOption = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -286,10 +286,10 @@ namespace TaskbarAdvancedSettings
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.taskbarSettingsPanel.SuspendLayout();
             this.behaviorsPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.behaviorsPanelTaskbarLocation.SuspendLayout();
+            this.behaviorsPanelLock.SuspendLayout();
+            this.behaviorsPanelSmallButtons.SuspendLayout();
+            this.behaviorsPanelCombineButtons.SuspendLayout();
             this.taskbarStylePanel.SuspendLayout();
             this.panel33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -2095,10 +2095,10 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.behaviorsPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.behaviorsPanel.Controls.Add(this.panel4);
-            this.behaviorsPanel.Controls.Add(this.panel9);
-            this.behaviorsPanel.Controls.Add(this.panel1);
-            this.behaviorsPanel.Controls.Add(this.panel3);
+            this.behaviorsPanel.Controls.Add(this.behaviorsPanelTaskbarLocation);
+            this.behaviorsPanel.Controls.Add(this.behaviorsPanelLock);
+            this.behaviorsPanel.Controls.Add(this.behaviorsPanelSmallButtons);
+            this.behaviorsPanel.Controls.Add(this.behaviorsPanelCombineButtons);
             this.behaviorsPanel.Controls.Add(this.label15);
             this.behaviorsPanel.Controls.Add(this.label16);
             this.behaviorsPanel.Location = new System.Drawing.Point(20, 607);
@@ -2107,18 +2107,18 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanel.TabIndex = 11;
             this.behaviorsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
-            // panel4
+            // behaviorsPanelTaskbarLocation
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.behaviorsPanelTaskbarLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel4.Controls.Add(this.taskbarPositionComboBox);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Location = new System.Drawing.Point(0, 264);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(978, 66);
-            this.panel4.TabIndex = 15;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            this.behaviorsPanelTaskbarLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.behaviorsPanelTaskbarLocation.Controls.Add(this.taskbarPositionComboBox);
+            this.behaviorsPanelTaskbarLocation.Controls.Add(this.label14);
+            this.behaviorsPanelTaskbarLocation.Location = new System.Drawing.Point(0, 264);
+            this.behaviorsPanelTaskbarLocation.Name = "behaviorsPanelTaskbarLocation";
+            this.behaviorsPanelTaskbarLocation.Size = new System.Drawing.Size(978, 66);
+            this.behaviorsPanelTaskbarLocation.TabIndex = 15;
+            this.behaviorsPanelTaskbarLocation.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
             // taskbarPositionComboBox
             // 
@@ -2149,18 +2149,18 @@ namespace TaskbarAdvancedSettings
             this.label14.TabIndex = 7;
             this.label14.Text = "Taskbar location on screen";
             // 
-            // panel9
+            // behaviorsPanelLock
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.behaviorsPanelLock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.label21);
-            this.panel9.Controls.Add(this.lockTaskbarBtn);
-            this.panel9.Controls.Add(this.lockTaskbarLbl);
-            this.panel9.Location = new System.Drawing.Point(0, 72);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(978, 66);
-            this.panel9.TabIndex = 14;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            this.behaviorsPanelLock.Controls.Add(this.label21);
+            this.behaviorsPanelLock.Controls.Add(this.lockTaskbarBtn);
+            this.behaviorsPanelLock.Controls.Add(this.lockTaskbarLbl);
+            this.behaviorsPanelLock.Location = new System.Drawing.Point(0, 72);
+            this.behaviorsPanelLock.Name = "behaviorsPanelLock";
+            this.behaviorsPanelLock.Size = new System.Drawing.Size(978, 66);
+            this.behaviorsPanelLock.TabIndex = 14;
+            this.behaviorsPanelLock.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
             // label21
             // 
@@ -2202,18 +2202,18 @@ namespace TaskbarAdvancedSettings
             this.lockTaskbarLbl.TabIndex = 8;
             this.lockTaskbarLbl.Text = "Off";
             // 
-            // panel1
+            // behaviorsPanelSmallButtons
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.behaviorsPanelSmallButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.smallButtonsBtn);
-            this.panel1.Controls.Add(this.smallButtonsLbl);
-            this.panel1.Location = new System.Drawing.Point(0, 136);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(978, 66);
-            this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            this.behaviorsPanelSmallButtons.Controls.Add(this.label17);
+            this.behaviorsPanelSmallButtons.Controls.Add(this.smallButtonsBtn);
+            this.behaviorsPanelSmallButtons.Controls.Add(this.smallButtonsLbl);
+            this.behaviorsPanelSmallButtons.Location = new System.Drawing.Point(0, 136);
+            this.behaviorsPanelSmallButtons.Name = "behaviorsPanelSmallButtons";
+            this.behaviorsPanelSmallButtons.Size = new System.Drawing.Size(978, 66);
+            this.behaviorsPanelSmallButtons.TabIndex = 12;
+            this.behaviorsPanelSmallButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
             // label17
             // 
@@ -2255,18 +2255,18 @@ namespace TaskbarAdvancedSettings
             this.smallButtonsLbl.TabIndex = 8;
             this.smallButtonsLbl.Text = "Off";
             // 
-            // panel3
+            // behaviorsPanelCombineButtons
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.behaviorsPanelCombineButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Controls.Add(this.taskbarButtonsCombineOption);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Location = new System.Drawing.Point(0, 200);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(978, 66);
-            this.panel3.TabIndex = 11;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            this.behaviorsPanelCombineButtons.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.behaviorsPanelCombineButtons.Controls.Add(this.taskbarButtonsCombineOption);
+            this.behaviorsPanelCombineButtons.Controls.Add(this.label13);
+            this.behaviorsPanelCombineButtons.Location = new System.Drawing.Point(0, 200);
+            this.behaviorsPanelCombineButtons.Name = "behaviorsPanelCombineButtons";
+            this.behaviorsPanelCombineButtons.Size = new System.Drawing.Size(978, 66);
+            this.behaviorsPanelCombineButtons.TabIndex = 11;
+            this.behaviorsPanelCombineButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
             // taskbarButtonsCombineOption
             // 
@@ -2816,14 +2816,14 @@ namespace TaskbarAdvancedSettings
             this.taskbarSettingsPanel.PerformLayout();
             this.behaviorsPanel.ResumeLayout(false);
             this.behaviorsPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.behaviorsPanelTaskbarLocation.ResumeLayout(false);
+            this.behaviorsPanelTaskbarLocation.PerformLayout();
+            this.behaviorsPanelLock.ResumeLayout(false);
+            this.behaviorsPanelLock.PerformLayout();
+            this.behaviorsPanelSmallButtons.ResumeLayout(false);
+            this.behaviorsPanelSmallButtons.PerformLayout();
+            this.behaviorsPanelCombineButtons.ResumeLayout(false);
+            this.behaviorsPanelCombineButtons.PerformLayout();
             this.taskbarStylePanel.ResumeLayout(false);
             this.taskbarStylePanel.PerformLayout();
             this.panel33.ResumeLayout(false);
@@ -2872,11 +2872,11 @@ namespace TaskbarAdvancedSettings
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel behaviorsPanel;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel behaviorsPanelCombineButtons;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel behaviorsPanelSmallButtons;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button smallButtonsBtn;
         private System.Windows.Forms.Label smallButtonsLbl;
@@ -2886,11 +2886,11 @@ namespace TaskbarAdvancedSettings
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel behaviorsPanelLock;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button lockTaskbarBtn;
         private System.Windows.Forms.Label lockTaskbarLbl;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel behaviorsPanelTaskbarLocation;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;

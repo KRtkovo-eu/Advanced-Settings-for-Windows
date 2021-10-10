@@ -209,7 +209,9 @@ namespace TaskbarAdvancedSettings
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOffStateDisabled;
 
                 notificationAreaPanel.Enabled = false;
-                behaviorsPanel.Enabled = false;
+                behaviorsPanelLock.Enabled = false;
+                behaviorsPanelSmallButtons.Enabled = false;
+                behaviorsPanelCombineButtons.Enabled = false;
             }
             else
             {
@@ -228,7 +230,9 @@ namespace TaskbarAdvancedSettings
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOnStateDisabled;
 
                 notificationAreaPanel.Enabled = true;
-                behaviorsPanel.Enabled = true;
+                behaviorsPanelLock.Enabled = true;
+                behaviorsPanelSmallButtons.Enabled = true;
+                behaviorsPanelCombineButtons.Enabled = true;
             }
 
             return CurrentTaskbarStyle;
