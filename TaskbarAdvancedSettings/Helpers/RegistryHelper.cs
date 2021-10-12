@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 
 namespace TaskbarAdvancedSettings.Helpers
 {
@@ -69,13 +68,18 @@ namespace TaskbarAdvancedSettings.Helpers
                 rk = regPath.RegistryBase.CreateSubKey(regPath.RegistryPath, true);
             }
 
+            Write(rk, regPath.RegistryKey, KeyValue, registryValueKind);
+        }
+
+        public static void Write<T>(RegistryKey rk, string Key, T KeyValue, RegistryValueKind registryValueKind = RegistryValueKind.DWord)
+        {
             if (registryValueKind != RegistryValueKind.DWord)
             {
-                rk.SetValue(regPath.RegistryKey, KeyValue, registryValueKind);
+                rk.SetValue(Key, KeyValue, registryValueKind);
             }
             else
             {
-                rk.SetValue(regPath.RegistryKey, KeyValue);
+                rk.SetValue(Key, KeyValue);
             }
         }
 

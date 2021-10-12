@@ -103,6 +103,26 @@ namespace TaskbarAdvancedSettings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brave_21 {
+            get {
+                object obj = ResourceManager.GetObject("brave_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_48 {
+            get {
+                object obj = ResourceManager.GetObject("brave_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cairo {
             get {
                 object obj = ResourceManager.GetObject("cairo", resourceCulture);
@@ -113,9 +133,89 @@ namespace TaskbarAdvancedSettings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chrome_21 {
+            get {
+                object obj = ResourceManager.GetObject("chrome_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chrome_48 {
+            get {
+                object obj = ResourceManager.GetObject("chrome_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chromium_21 {
+            get {
+                object obj = ResourceManager.GetObject("chromium_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chromium_48 {
+            get {
+                object obj = ResourceManager.GetObject("chromium_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap desktopIcon {
             get {
                 object obj = ResourceManager.GetObject("desktopIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edge_21 {
+            get {
+                object obj = ResourceManager.GetObject("edge_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edge_48 {
+            get {
+                object obj = ResourceManager.GetObject("edge_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap firefox_21 {
+            get {
+                object obj = ResourceManager.GetObject("firefox_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap firefox_48 {
+            get {
+                object obj = ResourceManager.GetObject("firefox_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +246,36 @@ namespace TaskbarAdvancedSettings.Properties {
         internal static System.Drawing.Bitmap openshell {
             get {
                 object obj = ResourceManager.GetObject("openshell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opera_21 {
+            get {
+                object obj = ResourceManager.GetObject("opera_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opera_48 {
+            get {
+                object obj = ResourceManager.GetObject("opera_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap overlay {
+            get {
+                object obj = ResourceManager.GetObject("overlay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -187,6 +317,16 @@ namespace TaskbarAdvancedSettings.Properties {
             get {
                 object obj = ResourceManager.GetObject("puzzle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SetDefaultBrowser {
+            get {
+                object obj = ResourceManager.GetObject("SetDefaultBrowser", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -266,6 +406,46 @@ namespace TaskbarAdvancedSettings.Properties {
         internal static System.Drawing.Bitmap taskbarStartIcon {
             get {
                 object obj = ResourceManager.GetObject("taskbarStartIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vivaldi_21 {
+            get {
+                object obj = ResourceManager.GetObject("vivaldi_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vivaldi_48 {
+            get {
+                object obj = ResourceManager.GetObject("vivaldi_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waterfox_21 {
+            get {
+                object obj = ResourceManager.GetObject("waterfox_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waterfox_48 {
+            get {
+                object obj = ResourceManager.GetObject("waterfox_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

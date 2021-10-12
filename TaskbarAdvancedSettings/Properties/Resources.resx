@@ -118,23 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="powertoys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\powertoys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="puzzle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\puzzle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="start11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\start11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="startisback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\startisback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="taskbarStartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\taskbarStartIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="winLegacyDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\winLegacyDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="winDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\winDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="awards" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\awards.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="switchOffStateDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\off_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="winLegacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\winLegacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="desktopIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\desktopIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taskbarIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\taskbarIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="switchOffState" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cairo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\cairo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="githubIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\githubIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,58 +154,103 @@
   <data name="win" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="winDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\winDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="switchOffState" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="puzzle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\puzzle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="freeware" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\freeware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="switchOnStateDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\on_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7tt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\7tt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cairo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\cairo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="winRetro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\winRetro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="programIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\programIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="startisback" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\startisback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="desktopIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\desktopIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="programming" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\programming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="openshell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\openshell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="awards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\awards.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="switchOffStateDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\off_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="taskbarStartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\taskbarStartIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="aboutLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\aboutLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="start11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\start11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="powertoys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\powertoys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7tt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\7tt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="programIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\programIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winLegacyDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\winLegacyDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winLegacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\winLegacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winRetro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\winRetro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="switchOnState" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Misc\on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="taskbarIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\taskbarIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="openshell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\openshell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="freeware" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Misc\freeware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="overlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\overlay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\brave_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\brave_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chrome_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\chrome_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chrome_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\chrome_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chromium_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\chromium_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chromium_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\chromium_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edge_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\edge_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edge_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\edge_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firefox_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\firefox_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firefox_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\firefox_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opera_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\opera_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opera_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\opera_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetDefaultBrowser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SetDefaultBrowser\SetDefaultBrowser.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="vivaldi_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\vivaldi_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vivaldi_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\vivaldi_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waterfox_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\waterfox_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waterfox_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Misc\browser\waterfox_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

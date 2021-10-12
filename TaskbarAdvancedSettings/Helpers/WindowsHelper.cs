@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Linq;
-using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.Win32;
+using System.IO;
 
 namespace TaskbarAdvancedSettings.Helpers
 {
@@ -26,7 +28,7 @@ namespace TaskbarAdvancedSettings.Helpers
 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern IntPtr SendMessage(IntPtr hWnd, int WM_SYSCOMMAND, int SC_TASKLIST, int param);
-        
+
         /// <summary>
         /// Soft restart or reload of Windows taskbar
         /// </summary>
@@ -80,7 +82,7 @@ namespace TaskbarAdvancedSettings.Helpers
 
         [DllImport("shell32.dll", EntryPoint = "#261",
                    CharSet = CharSet.Unicode, PreserveSig = false)]
-        public static extern void GetUserTilePath(
+        private static extern void GetUserTilePath(
           string username,
           UInt32 whatever, // 0x80000000
           StringBuilder picpath, int maxLength);
@@ -171,7 +173,7 @@ namespace TaskbarAdvancedSettings.Helpers
         {
             byte[] currentPosition = RegistryHelper.Read<byte[]>(RegistryHelper.TaskbarLocationRegPath);
 
-            if(currentPosition.SequenceEqual(TaskbarPositionLeft))
+            if (currentPosition.SequenceEqual(TaskbarPositionLeft))
             {
                 return TaskbarPosition.Left;
             }
@@ -194,7 +196,124 @@ namespace TaskbarAdvancedSettings.Helpers
         public static void ShowStartMenu()
         {
             Task.Run(() => SendMessageTimeout(HWND_BROADCAST, WM_SYSCOMMAND, new IntPtr(SC_TASKLIST), null, 0, 0, IntPtr.Zero));
+        }
 
+        public struct WebBrowserInfo
+        {
+            public WebBrowserInfo(string productName, string registryKeyName, Image icon, Image iconSmall)
+            {
+                ProductName = productName;
+                RegistryKeyName = registryKeyName;
+                Icon = icon;
+                IconSmall = iconSmall;
+
+            }
+
+            public string ProductName { get; }
+            public string RegistryKeyName { get; }
+            public Image IconSmall { get; }
+            public Image Icon { get; }
+        }
+
+        public struct WebBrowser
+        {
+            public WebBrowser(WebBrowserInfo browserInfo, string progID, string hive, string progName, bool isDefault)
+            {
+                BrowserInfo = browserInfo;
+                ProgID = progID;
+                Hive = hive;
+                ProgName = progName;
+                IsDefault = isDefault;
+            }
+
+            public WebBrowserInfo BrowserInfo { get; }
+            public string ProgID { get; set; }
+            public string Hive { get; set; }
+            public string ProgName { get; set; }
+            public bool IsDefault { get; set; }
+        }
+
+        // List of known web browsers, their names and progIDs
+        public static List<WebBrowserInfo> KnownWebBrowsersInfo = new List<WebBrowserInfo>()
+        {
+            new WebBrowserInfo("Microsoft Edge", "Microsoft Edge", Properties.Resources.edge_48, Properties.Resources.edge_21),
+            new WebBrowserInfo("Chromium", "Chromium", Properties.Resources.chromium_48, Properties.Resources.chromium_21),
+            new WebBrowserInfo("Google Chrome", "Google Chrome", Properties.Resources.chrome_48, Properties.Resources.chrome_21),
+            new WebBrowserInfo("Vivaldi", "Vivaldi", Properties.Resources.vivaldi_48, Properties.Resources.vivaldi_21),
+            new WebBrowserInfo("Opera", "OperaStable", Properties.Resources.opera_48, Properties.Resources.opera_21),
+            new WebBrowserInfo("Brave", "Brave", Properties.Resources.brave_48, Properties.Resources.brave_21),
+            new WebBrowserInfo("Firefox", "Firefox", Properties.Resources.firefox_48, Properties.Resources.firefox_21),
+            new WebBrowserInfo("Waterfox", "Waterfox", Properties.Resources.waterfox_48, Properties.Resources.waterfox_21),
+        };
+        
+        public static void SetDefaultWebBrowser(WebBrowser webBrowser)
+        {
+            object ob = Properties.Resources.SetDefaultBrowser;
+            byte[] myResBytes = (byte[])ob;
+            using (FileStream fsDst = new FileStream(Form1.DefaultToolLocation + "\\sb.exe", FileMode.Create, FileAccess.Write))
+            {
+                byte[] bytes = myResBytes;
+                fsDst.Write(bytes, 0, bytes.Length);
+                fsDst.Close();
+                fsDst.Dispose();
+            }
+
+            System.Diagnostics.Process.Start(Form1.DefaultToolLocation + "\\sb.exe", $"{webBrowser.Hive} \"{webBrowser.ProgName}\"");
+
+        }
+
+        public static bool IsDefaultWebBrowser(string progID)
+        {
+            var currentProgID = Registry.CurrentUser.OpenSubKey($@"Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice").GetValue("ProgID");
+
+            return progID.Equals(currentProgID);
+        }
+
+
+        public static List<WebBrowser> GetInstalledWebBrowser()
+        {
+            RegistryKey hkcu = Registry.CurrentUser.OpenSubKey(@"Software\Clients\StartMenuInternet");
+            RegistryKey hklm = Registry.LocalMachine.OpenSubKey(@"Software\Clients\StartMenuInternet");
+
+            List<WebBrowser> hkcuWebBrowsers = new List<WebBrowser>();
+            List<WebBrowser> hklmWebBrowsers = new List<WebBrowser>();
+
+            if (hkcu != null)
+            {
+                foreach(var subkey in hkcu.GetSubKeyNames())
+                {
+                    RegistryKey browserInfo = hkcu.OpenSubKey($@"{subkey}\Capabilities\FileAssociations");
+                    if(browserInfo != null)
+                    {
+                        WebBrowserInfo subkeyBrowserInfo = KnownWebBrowsersInfo.First(x => subkey.StartsWith(x.RegistryKeyName));
+                        string subkeyBrowserProgID = browserInfo.GetValue(".html").ToString();
+                        hkcuWebBrowsers.Add(new WebBrowser(subkeyBrowserInfo, subkeyBrowserProgID, "hkcu", subkey, IsDefaultWebBrowser(subkeyBrowserProgID)));
+                    }
+                    
+                }
+            }
+            if (hklm != null)
+            {
+                foreach (var subkey in hklm.GetSubKeyNames())
+                {
+                    RegistryKey browserInfo = hklm.OpenSubKey($@"{subkey}\Capabilities\FileAssociations");
+                    if (browserInfo != null)
+                    {
+                        WebBrowserInfo subkeyBrowserInfo = KnownWebBrowsersInfo.First(x => subkey.StartsWith(x.RegistryKeyName));
+                        string subkeyBrowserProgID = browserInfo.GetValue(".html").ToString();
+                        hklmWebBrowsers.Add(new WebBrowser(subkeyBrowserInfo, subkeyBrowserProgID, "hklm", subkey, IsDefaultWebBrowser(subkeyBrowserProgID)));
+                    }
+                }
+            }
+
+            List<WebBrowser> webBrowsersAvailable = hkcuWebBrowsers.Union(hklmWebBrowsers).ToList();
+
+            return webBrowsersAvailable;
+        }
+
+        public static WebBrowser GetDefaultWebBrowser()
+        {
+            return GetInstalledWebBrowser().Find(x => x.IsDefault);
         }
     }
 }

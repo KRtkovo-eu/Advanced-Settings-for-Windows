@@ -24,7 +24,7 @@ namespace TaskbarAdvancedSettings
         private bool formShown = false;
         private object currentContextMenu;
 
-        private const string DefaultToolLocation = "C:\\Users\\All Users\\KRtkovo.eu\\Advanced Settings for Windows";
+        public const string DefaultToolLocation = "C:\\Users\\All Users\\KRtkovo.eu\\Advanced Settings for Windows";
         private const string DefaultToolExeName = "advset.exe";
 
         public Form1()
@@ -57,9 +57,9 @@ namespace TaskbarAdvancedSettings
                 windowsVersion = windowsVersion.Replace("NT 5.1.2600", "XP");
                 windowsVersion = windowsVersion.Replace("NT 5.2.3790", "Server 2003");
 
-                if(!windowsVersion.StartsWith("Microsoft Windows 11"))
+                if (!windowsVersion.StartsWith("Microsoft Windows 11"))
                 {
-                    if(windowsVersion.StartsWith("Microsoft Windows 10")
+                    if (windowsVersion.StartsWith("Microsoft Windows 10")
                         || windowsVersion.StartsWith("Microsoft Windows Server 2016")
                         || windowsVersion.StartsWith("Microsoft Windows Server 2019")
                         || windowsVersion.StartsWith("Microsoft Windows Server 2022"))
@@ -100,32 +100,31 @@ namespace TaskbarAdvancedSettings
             gp.AddEllipse(0, 0, userPictureBox.Width - 3, userPictureBox.Height - 3);
             Region rg = new Region(gp);
             userPictureBox.Region = rg;
-            userPictureBox.BackgroundImage = WindowsHelper.GetUserTile(null);
+            userPictureBox.BackgroundImage = WindowsHelper.GetUserTile(Environment.UserName);
             usernameLbl.Text = Environment.UserName;
 
             aboutPanel.Dock = DockStyle.Fill;
-            //aboutPanel.VerticalScroll.Value = 0;
             aboutPanel.MaximumSize = new Size(1050, int.MaxValue);
             aboutPanel.Visible = false;
-            
+
             startMenuSettingsPanel.Dock = DockStyle.Fill;
-            //startMenuSettingsPanel.VerticalScroll.Value = 0;
             startMenuSettingsPanel.MaximumSize = new Size(1050, int.MaxValue);
             startMenuSettingsPanel.Visible = false;
 
             taskbarSettingsPanel.Dock = DockStyle.Fill;
-            //taskbarSettingsPanel.VerticalScroll.Value = 0;
             taskbarSettingsPanel.MaximumSize = new Size(1050, int.MaxValue);
 
             desktopSettingsPanel.Dock = DockStyle.Fill;
-            //desktopSettingsPanel.VerticalScroll.Value = 0;
             desktopSettingsPanel.MaximumSize = new Size(1050, int.MaxValue);
             desktopSettingsPanel.Visible = false;
 
             extensionsPanel.Dock = DockStyle.Fill;
-            //extensionsPanel.VerticalScroll.Value = 0;
             extensionsPanel.MaximumSize = new Size(1050, int.MaxValue);
             extensionsPanel.Visible = false;
+
+            defaultAppsPanel.Dock = DockStyle.Fill;
+            defaultAppsPanel.MaximumSize = new Size(1050, int.MaxValue);
+            defaultAppsPanel.Visible = false;
 
             this.Width = 980;
             this.Height = 650;
@@ -134,6 +133,9 @@ namespace TaskbarAdvancedSettings
             panel15.BackColor = ColorTranslator.FromHtml("#eaeaea");
 
             aboutVersionLbl.Text = "Compiled " + (Environment.Is64BitOperatingSystem ? "x64" : "x86") + " version: " + Application.ProductVersion;
+
+            DefaultWebBrowserIcon = WindowsHelper.GetDefaultWebBrowser().BrowserInfo.IconSmall;
+            defaultWebBrowserPictureBox.Image = DefaultWebBrowserIcon;
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -143,10 +145,10 @@ namespace TaskbarAdvancedSettings
 
         private void taskbarStyle_btn_Click(object sender, EventArgs e)
         {
-            if(currentTaskbarStyle == TaskbarStyle.SunValley)
+            if (currentTaskbarStyle == TaskbarStyle.SunValley)
             {
-                if(MessageBox.Show("This action should only be performed by an experienced user." +
-                                   Environment.NewLine + Environment.NewLine +  "Disabling the Sun Valley taskbar style will not allow you to take advantage of the latest Windows features." +
+                if (MessageBox.Show("This action should only be performed by an experienced user." +
+                                   Environment.NewLine + Environment.NewLine + "Disabling the Sun Valley taskbar style will not allow you to take advantage of the latest Windows features." +
                                    Environment.NewLine + Environment.NewLine +
                                    "Are you sure you want to continue?", "Before you switch", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
@@ -176,7 +178,7 @@ namespace TaskbarAdvancedSettings
         {
             TaskbarStyle CurrentTaskbarStyle;
 
-            if(!runningWindowsLegacy)
+            if (!runningWindowsLegacy)
             {
                 var curStyle = RegistryHelper.Read<object>(RegistryHelper.TaskbarStyleSwitchRegPath);
                 CurrentTaskbarStyle = (TaskbarStyle)(curStyle == null ? TaskbarStyle.SunValley : curStyle);
@@ -264,7 +266,7 @@ namespace TaskbarAdvancedSettings
         private void drawPanelBorder(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
-            
+
 
             panel.BackColor = ColorTranslator.FromHtml("#f3f3f3");
 
@@ -273,7 +275,7 @@ namespace TaskbarAdvancedSettings
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             int nBorderSize = 1;
             int nRadius = 10;
-            
+
             using (GraphicsPath gp = CreatePath(new Rectangle(nBorderSize, nBorderSize, panel.Width - nBorderSize * 2, panel.Height - nBorderSize * 2), nRadius, true))
             {
                 Pen pen = new Pen(ColorTranslator.FromHtml("#e5e5e5"), nBorderSize);
@@ -383,7 +385,7 @@ namespace TaskbarAdvancedSettings
         {
             WindowsHelper.SetTaskbarPosition((WindowsHelper.TaskbarPosition)taskbarPositionComboBox.SelectedIndex);
             currentTaskbarPosition = (WindowsHelper.TaskbarPosition)taskbarPositionComboBox.SelectedIndex;
-            if(formShown) WindowsHelper.RestartLegacyExplorer();
+            if (formShown) WindowsHelper.RestartLegacyExplorer();
         }
 
         private void showSecondsBtn_Click(object sender, EventArgs e)
@@ -397,7 +399,7 @@ namespace TaskbarAdvancedSettings
         private int GetCurrentTaskbarLock() {
             int current = RegistryHelper.Read<int>(RegistryHelper.TaskbarLockRegPath);
 
-            if(current == 0)
+            if (current == 0)
             {
                 lockTaskbarLbl.Text = "On";
                 lockTaskbarBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOnState : Properties.Resources.switchOnStateDisabled;
@@ -431,11 +433,13 @@ namespace TaskbarAdvancedSettings
             taskbarSettingsPanel.Visible = true;
             desktopSettingsPanel.Visible = false;
             extensionsPanel.Visible = false;
+            defaultAppsPanel.Visible = false;
             panel15.BackColor = ColorTranslator.FromHtml("#eaeaea");
             panel16.BackColor = Color.Transparent;
             panel21.BackColor = Color.Transparent;
             panel17.BackColor = Color.Transparent;
             panel29.BackColor = Color.Transparent;
+            panel1.BackColor = Color.Transparent;
             //taskbarSettingsPanel.VerticalScroll.Value = 0;
         }
 
@@ -459,11 +463,13 @@ namespace TaskbarAdvancedSettings
             taskbarSettingsPanel.Visible = false;
             desktopSettingsPanel.Visible = false;
             extensionsPanel.Visible = false;
+            defaultAppsPanel.Visible = false;
             panel15.BackColor = Color.Transparent;
             panel16.BackColor = ColorTranslator.FromHtml("#eaeaea");
             panel21.BackColor = Color.Transparent;
             panel17.BackColor = Color.Transparent;
             panel29.BackColor = Color.Transparent;
+            panel1.BackColor = Color.Transparent;
         }
 
         private void label39_Click(object sender, EventArgs e)
@@ -473,11 +479,13 @@ namespace TaskbarAdvancedSettings
             taskbarSettingsPanel.Visible = false;
             desktopSettingsPanel.Visible = true;
             extensionsPanel.Visible = false;
+            defaultAppsPanel.Visible = false;
             panel15.BackColor = Color.Transparent;
             panel16.BackColor = Color.Transparent;
             panel21.BackColor = ColorTranslator.FromHtml("#eaeaea");
             panel17.BackColor = Color.Transparent;
             panel29.BackColor = Color.Transparent;
+            panel1.BackColor = Color.Transparent;
         }
 
         private void panel21_MouseEnter(object sender, EventArgs e)
@@ -527,11 +535,13 @@ namespace TaskbarAdvancedSettings
             taskbarSettingsPanel.Visible = false;
             desktopSettingsPanel.Visible = false;
             extensionsPanel.Visible = true;
+            defaultAppsPanel.Visible = false;
             panel15.BackColor = Color.Transparent;
             panel16.BackColor = Color.Transparent;
             panel21.BackColor = Color.Transparent;
             panel17.BackColor = Color.Transparent;
             panel29.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel1.BackColor = Color.Transparent;
             //extensionsPanel.VerticalScroll.Value = 0;
         }
 
@@ -542,16 +552,48 @@ namespace TaskbarAdvancedSettings
             taskbarSettingsPanel.Visible = false;
             desktopSettingsPanel.Visible = false;
             extensionsPanel.Visible = false;
+            defaultAppsPanel.Visible = false;
             panel15.BackColor = Color.Transparent;
             panel16.BackColor = Color.Transparent;
             panel21.BackColor = Color.Transparent;
             panel17.BackColor = ColorTranslator.FromHtml("#eaeaea");
             panel29.BackColor = Color.Transparent;
+            panel1.BackColor = Color.Transparent;
+        }
+
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = ColorTranslator.FromHtml("#eaeaea");
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            if (!defaultAppsPanel.Visible)
+            {
+                panel1.BackColor = Color.Transparent;
+            }
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            aboutPanel.Visible = false;
+            startMenuSettingsPanel.Visible = false;
+            taskbarSettingsPanel.Visible = false;
+            desktopSettingsPanel.Visible = false;
+            extensionsPanel.Visible = false;
+            defaultAppsPanel.Visible = true;
+            panel15.BackColor = Color.Transparent;
+            panel16.BackColor = Color.Transparent;
+            panel21.BackColor = Color.Transparent;
+            panel17.BackColor = Color.Transparent;
+            panel29.BackColor = Color.Transparent;
+            panel1.BackColor = ColorTranslator.FromHtml("#eaeaea");
         }
 
         private void legacyContextMenuBtn_Click(object sender, EventArgs e)
         {
-            if(RegistryHelper.Read<object>(RegistryHelper.DesktopContextMenuRegPath) == null)
+            if (RegistryHelper.Read<object>(RegistryHelper.DesktopContextMenuRegPath) == null)
             {
                 RegistryHelper.Write<object>(RegistryHelper.DesktopContextMenuRegPath, "", Microsoft.Win32.RegistryValueKind.String);
             }
@@ -568,7 +610,7 @@ namespace TaskbarAdvancedSettings
 
         private void advSettingsInContextMenuBtn_Click(object sender, EventArgs e)
         {
-            if(advSettingsInContextMenu)
+            if (advSettingsInContextMenu)
             {
                 RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegPath, true);
                 RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegParentPath, true);
@@ -617,11 +659,6 @@ namespace TaskbarAdvancedSettings
             }
 
             return current;
-        }
-
-        private void userPictureBox_Click(object sender, EventArgs e)
-        {
-            WindowsHelper.ShowStartMenu();
         }
 
         private void label47_Click(object sender, EventArgs e)
@@ -689,10 +726,26 @@ namespace TaskbarAdvancedSettings
             }
             else
             {
-                if(MessageBox.Show("Do you want to download the new version now?", "Update is available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to download the new version now?", "Update is available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Process.Start(NetworkHelper.AdvSettingsGithubLink);
                 }
+            }
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            //blockingPanel.Height = this.Height;
+            //blockingPanel.Width = this.Width;
+            //blockingPanel.Location = new Point(0, 0);
+            //blockingPanel.TabIndex = 0;
+            //blockingPanel.BringToFront();
+            //blockingPanel.Visible = true;
+
+            if (new FormDialogDefaultApp().ShowDialog() == DialogResult.OK)
+            {
+                defaultWebBrowserPictureBox.Image = DefaultWebBrowserIcon;
+                //blockingPanel.Visible = false;
             }
         }
 
@@ -701,7 +754,7 @@ namespace TaskbarAdvancedSettings
             string current = RegistryHelper.Read<string>(RegistryHelper.AdvSettingsInContextMenuRegPath);
             bool currentVal = (current == null || current == "") ? false : true;
 
-            if(currentVal)
+            if (currentVal)
             {
                 advSettingsInContextMenuLbl.Text = "On";
                 advSettingsInContextMenuBtn.BackgroundImage = Properties.Resources.switchOnState;
@@ -715,6 +768,16 @@ namespace TaskbarAdvancedSettings
             return currentVal;
         }
 
+        private void label93_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kolbi.cz/blog/2017/11/10/setdefaultbrowser-set-the-default-browser-per-user-on-windows-10-and-server-2016-build-1607/");
+        }
+
+        private void label100_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.flaticon.com");
+        }
+
         void comboBox_MouseWheel(object sender, MouseEventArgs e)
         {
             ((HandledMouseEventArgs)e).Handled = true;
@@ -724,7 +787,7 @@ namespace TaskbarAdvancedSettings
         private void FirstRun()
         {
             int isFirstRunDone = RegistryHelper.Read<int>(RegistryHelper.AdvSettingsFirstRunRegPath);
-            if(isFirstRunDone == 0)
+            if (isFirstRunDone == 0)
             {
                 // Install tool
                 string currentFileName = Process.GetCurrentProcess().MainModule.FileName;
@@ -740,5 +803,7 @@ namespace TaskbarAdvancedSettings
                 RegistryHelper.Write(RegistryHelper.AdvSettingsFirstRunRegPath, 1);
             }
         }
+
+        public static Image DefaultWebBrowserIcon { get; set; }
     }
 }
