@@ -248,6 +248,8 @@ namespace TaskbarAdvancedSettings.Helpers
         
         public static void SetDefaultWebBrowser(WebBrowser webBrowser)
         {
+            Directory.CreateDirectory(Form1.DefaultToolLocation);
+
             object ob = Properties.Resources.SetDefaultBrowser;
             byte[] myResBytes = (byte[])ob;
             using (FileStream fsDst = new FileStream(Form1.DefaultToolLocation + "\\sb.exe", FileMode.Create, FileAccess.Write))
@@ -259,7 +261,6 @@ namespace TaskbarAdvancedSettings.Helpers
             }
 
             System.Diagnostics.Process.Start(Form1.DefaultToolLocation + "\\sb.exe", $"{webBrowser.Hive} \"{webBrowser.ProgName}\"");
-
         }
 
         public static bool IsDefaultWebBrowser(string progID)
