@@ -21,7 +21,7 @@ namespace TaskbarAdvancedSettings
         private WindowsHelper.TaskbarPosition currentTaskbarPosition;
         private bool advSettingsInContextMenu;
         private bool runningWindowsLegacy = false; //false = Windows 11, true = Windows 10, Server 2016-2022
-        private bool formShown = false;
+        private bool formShown, runOnce = false;
         private object currentContextMenu;
 
         public const string DefaultToolLocation = "C:\\Users\\All Users\\KRtkovo.eu\\Advanced Settings for Windows";
@@ -833,7 +833,8 @@ namespace TaskbarAdvancedSettings
             else
             {
                 advSettingsInContextMenuLbl.Text = "Off";
-                advSettingsInContextMenuBtn.BackgroundImage = Properties.Resources.switchOffState;
+                advSettingsInContextMenuBtn.BackgroundImage = (runOnce) ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
+                panel22.Enabled = !runOnce;
             }
 
             return currentVal;
@@ -886,6 +887,11 @@ namespace TaskbarAdvancedSettings
                     // Restart tool from installed location
                     Process.Start(DefaultToolLocation + "\\" + DefaultToolExeName);
                     Process.GetCurrentProcess().Kill();
+                }
+                // Run once
+                else
+                {
+                    runOnce = true;
                 }
             }
             // Tool was installed and current running version is newer
