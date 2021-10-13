@@ -13,5 +13,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <RemoteDebugMachine>192.168.42.245</RemoteDebugMachine>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <AuthenticationMode>Windows</AuthenticationMode>
   </PropertyGroup>
 </Project>

@@ -33,24 +33,34 @@ namespace TaskbarAdvancedSettings
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.label86 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label58 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label42 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label39 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label33 = new System.Windows.Forms.Label();
             this.usernameLbl = new System.Windows.Forms.Label();
+            this.userPictureBox = new System.Windows.Forms.PictureBox();
+            this.blockingPanel = new System.Windows.Forms.Panel();
             this.defaultAppsPanel = new TaskbarAdvancedSettings.AutoScrollPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label87 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.defaultWebBrowserPictureBox = new System.Windows.Forms.PictureBox();
             this.label90 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
@@ -58,20 +68,26 @@ namespace TaskbarAdvancedSettings
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.label81 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.label79 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label72 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
@@ -79,47 +95,60 @@ namespace TaskbarAdvancedSettings
             this.panel31 = new System.Windows.Forms.Panel();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label68 = new System.Windows.Forms.Label();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.label67 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label46 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.label66 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.label65 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label64 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.desktopSettingsPanel = new TaskbarAdvancedSettings.AutoScrollPanel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label43 = new System.Windows.Forms.Label();
+            this.advSettingsInContextMenuBtn = new System.Windows.Forms.Button();
             this.advSettingsInContextMenuLbl = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
+            this.legacyContextMenuBtn = new System.Windows.Forms.Button();
             this.legacyContextMenuLbl = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -138,11 +167,14 @@ namespace TaskbarAdvancedSettings
             this.panel13 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.aboutVersionLbl = new System.Windows.Forms.Label();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -150,14 +182,20 @@ namespace TaskbarAdvancedSettings
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.startMenuPanel = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label63 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.legacyStartMenuBtn = new System.Windows.Forms.Button();
             this.legacyStartMenuLbl = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label57 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
+            this.startMenuSunValleyBtn = new System.Windows.Forms.Button();
             this.startMenuSunValleyLbl = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -170,9 +208,11 @@ namespace TaskbarAdvancedSettings
             this.label14 = new System.Windows.Forms.Label();
             this.behaviorsPanelLock = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.lockTaskbarBtn = new System.Windows.Forms.Button();
             this.lockTaskbarLbl = new System.Windows.Forms.Label();
             this.behaviorsPanelSmallButtons = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.smallButtonsBtn = new System.Windows.Forms.Button();
             this.smallButtonsLbl = new System.Windows.Forms.Label();
             this.behaviorsPanelCombineButtons = new System.Windows.Forms.Panel();
             this.taskbarButtonsCombineOption = new System.Windows.Forms.ComboBox();
@@ -182,18 +222,24 @@ namespace TaskbarAdvancedSettings
             this.label2 = new System.Windows.Forms.Label();
             this.taskbarStylePanel = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
+            this.legacyTaskbarBtn = new System.Windows.Forms.Button();
             this.legacyTaskbarLbl = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label59 = new System.Windows.Forms.Label();
             this.taskbarSunValleyPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.taskbarStyle_btn = new System.Windows.Forms.Button();
             this.taskbarStyle_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.notificationAreaPanel = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.showSecondsBtn = new System.Windows.Forms.Button();
             this.showSecondsLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -201,81 +247,58 @@ namespace TaskbarAdvancedSettings
             this.label22 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.blockingPanel = new System.Windows.Forms.Panel();
-            this.label89 = new System.Windows.Forms.Label();
-            this.defaultWebBrowserPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.advSettingsInContextMenuBtn = new System.Windows.Forms.Button();
-            this.legacyContextMenuBtn = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.legacyStartMenuBtn = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.startMenuSunValleyBtn = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.lockTaskbarBtn = new System.Windows.Forms.Button();
-            this.smallButtonsBtn = new System.Windows.Forms.Button();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.legacyTaskbarBtn = new System.Windows.Forms.Button();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.taskbarStyle_btn = new System.Windows.Forms.Button();
-            this.showSecondsBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.userPictureBox = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.defaultAppsPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.defaultWebBrowserPictureBox)).BeginInit();
             this.extensionsPanel.SuspendLayout();
             this.panel39.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.panel40.SuspendLayout();
             this.panel45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.panel23.SuspendLayout();
             this.panel37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel24.SuspendLayout();
             this.panel36.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panel34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.desktopSettingsPanel.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -285,12 +308,17 @@ namespace TaskbarAdvancedSettings
             this.panel48.SuspendLayout();
             this.panel47.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.startMenuSettingsPanel.SuspendLayout();
             this.startMenuPanel.SuspendLayout();
             this.panel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.taskbarSettingsPanel.SuspendLayout();
             this.behaviorsPanel.SuspendLayout();
             this.behaviorsPanelTaskbarLocation.SuspendLayout();
@@ -299,43 +327,15 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanelCombineButtons.SuspendLayout();
             this.taskbarStylePanel.SuspendLayout();
             this.panel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.taskbarSunValleyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.notificationAreaPanel.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.defaultWebBrowserPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -370,6 +370,19 @@ namespace TaskbarAdvancedSettings
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             // 
+            // pictureBox29
+            // 
+            this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
+            this.pictureBox29.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox29.TabIndex = 7;
+            this.pictureBox29.TabStop = false;
+            this.pictureBox29.Click += new System.EventHandler(this.panel1_Click);
+            this.pictureBox29.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.pictureBox29.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
+            // 
             // label86
             // 
             this.label86.AutoSize = true;
@@ -395,6 +408,19 @@ namespace TaskbarAdvancedSettings
             this.panel29.Click += new System.EventHandler(this.panel29_Click);
             this.panel29.MouseEnter += new System.EventHandler(this.panel29_MouseEnter);
             this.panel29.MouseLeave += new System.EventHandler(this.panel29_MouseLeave);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
+            this.pictureBox14.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox14.TabIndex = 7;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.panel29_Click);
+            this.pictureBox14.MouseEnter += new System.EventHandler(this.panel29_MouseEnter);
+            this.pictureBox14.MouseLeave += new System.EventHandler(this.panel29_MouseLeave);
             // 
             // label58
             // 
@@ -422,6 +448,19 @@ namespace TaskbarAdvancedSettings
             this.panel17.MouseEnter += new System.EventHandler(this.panel17_MouseEnter);
             this.panel17.MouseLeave += new System.EventHandler(this.panel17_MouseLeave);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::TaskbarAdvancedSettings.Properties.Resources.programIcon;
+            this.pictureBox7.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.panel17_Click);
+            this.pictureBox7.MouseEnter += new System.EventHandler(this.panel17_MouseEnter);
+            this.pictureBox7.MouseLeave += new System.EventHandler(this.panel17_MouseLeave);
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
@@ -447,6 +486,19 @@ namespace TaskbarAdvancedSettings
             this.panel21.Click += new System.EventHandler(this.label39_Click);
             this.panel21.MouseEnter += new System.EventHandler(this.panel21_MouseEnter);
             this.panel21.MouseLeave += new System.EventHandler(this.panel21_MouseLeave);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::TaskbarAdvancedSettings.Properties.Resources.desktopIcon;
+            this.pictureBox6.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.label39_Click);
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.panel21_MouseEnter);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.panel21_MouseLeave);
             // 
             // label39
             // 
@@ -474,6 +526,20 @@ namespace TaskbarAdvancedSettings
             this.panel16.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
             this.panel16.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Image = global::TaskbarAdvancedSettings.Properties.Resources.taskbarStartIcon;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.panel16_Click);
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -500,6 +566,19 @@ namespace TaskbarAdvancedSettings
             this.panel15.MouseEnter += new System.EventHandler(this.panel15_MouseEnter);
             this.panel15.MouseLeave += new System.EventHandler(this.panel15_MouseLeave);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::TaskbarAdvancedSettings.Properties.Resources.taskbarIcon;
+            this.pictureBox4.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.panel15_Click);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.panel15_MouseEnter);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.panel15_MouseLeave);
+            // 
             // label33
             // 
             this.label33.AutoSize = true;
@@ -523,6 +602,27 @@ namespace TaskbarAdvancedSettings
             this.usernameLbl.Size = new System.Drawing.Size(68, 17);
             this.usernameLbl.TabIndex = 1;
             this.usernameLbl.Text = "username";
+            // 
+            // userPictureBox
+            // 
+            this.userPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.userPictureBox.Location = new System.Drawing.Point(19, 19);
+            this.userPictureBox.Name = "userPictureBox";
+            this.userPictureBox.Size = new System.Drawing.Size(60, 60);
+            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPictureBox.TabIndex = 0;
+            this.userPictureBox.TabStop = false;
+            // 
+            // blockingPanel
+            // 
+            this.blockingPanel.BackColor = System.Drawing.Color.Transparent;
+            this.blockingPanel.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.overlay;
+            this.blockingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blockingPanel.Location = new System.Drawing.Point(240, 1032);
+            this.blockingPanel.Name = "blockingPanel";
+            this.blockingPanel.Size = new System.Drawing.Size(200, 29);
+            this.blockingPanel.TabIndex = 19;
+            this.blockingPanel.Visible = false;
             // 
             // defaultAppsPanel
             // 
@@ -564,6 +664,18 @@ namespace TaskbarAdvancedSettings
             this.label88.TabIndex = 9;
             this.label88.Text = "Default apps";
             // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label89.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label89.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
+            this.label89.Location = new System.Drawing.Point(249, 15);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(21, 36);
+            this.label89.TabIndex = 11;
+            this.label89.Text = " ";
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -591,6 +703,17 @@ namespace TaskbarAdvancedSettings
             this.panel9.TabIndex = 15;
             this.panel9.Click += new System.EventHandler(this.panel9_Click);
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // defaultWebBrowserPictureBox
+            // 
+            this.defaultWebBrowserPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.defaultWebBrowserPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.defaultWebBrowserPictureBox.Location = new System.Drawing.Point(46, 23);
+            this.defaultWebBrowserPictureBox.Name = "defaultWebBrowserPictureBox";
+            this.defaultWebBrowserPictureBox.Size = new System.Drawing.Size(21, 21);
+            this.defaultWebBrowserPictureBox.TabIndex = 11;
+            this.defaultWebBrowserPictureBox.TabStop = false;
+            this.defaultWebBrowserPictureBox.Click += new System.EventHandler(this.panel9_Click);
             // 
             // label90
             // 
@@ -685,6 +808,16 @@ namespace TaskbarAdvancedSettings
             this.panel44.TabIndex = 18;
             this.panel44.Paint += new System.Windows.Forms.PaintEventHandler(this.drawGreenPanelBorder);
             // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.Image = global::TaskbarAdvancedSettings.Properties.Resources.freeware;
+            this.pictureBox27.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox27.TabIndex = 13;
+            this.pictureBox27.TabStop = false;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -708,6 +841,17 @@ namespace TaskbarAdvancedSettings
             this.label82.Size = new System.Drawing.Size(285, 15);
             this.label82.TabIndex = 13;
             this.label82.Text = "Customize the behavior and look of the legacy taskbar";
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox26.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources._7tt;
+            this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox26.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox26.TabIndex = 10;
+            this.pictureBox26.TabStop = false;
             // 
             // label83
             // 
@@ -762,6 +906,16 @@ namespace TaskbarAdvancedSettings
             this.panel42.TabIndex = 17;
             this.panel42.Paint += new System.Windows.Forms.PaintEventHandler(this.drawBluePanelBorder);
             // 
+            // pictureBox25
+            // 
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox25.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
+            this.pictureBox25.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox25.TabIndex = 13;
+            this.pictureBox25.TabStop = false;
+            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -785,6 +939,17 @@ namespace TaskbarAdvancedSettings
             this.label76.Size = new System.Drawing.Size(304, 15);
             this.label76.TabIndex = 13;
             this.label76.Text = "Set of utilities for power users to tune Windows experience";
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox24.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.powertoys;
+            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox24.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox24.TabIndex = 10;
+            this.pictureBox24.TabStop = false;
             // 
             // label79
             // 
@@ -839,6 +1004,16 @@ namespace TaskbarAdvancedSettings
             this.panel45.TabIndex = 19;
             this.panel45.Paint += new System.Windows.Forms.PaintEventHandler(this.drawGreenPanelBorder);
             // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox28.Image = global::TaskbarAdvancedSettings.Properties.Resources.freeware;
+            this.pictureBox28.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox28.TabIndex = 13;
+            this.pictureBox28.TabStop = false;
+            // 
             // label85
             // 
             this.label85.AutoSize = true;
@@ -862,6 +1037,17 @@ namespace TaskbarAdvancedSettings
             this.label71.Size = new System.Drawing.Size(295, 15);
             this.label71.TabIndex = 13;
             this.label71.Text = "All-in-one tweaker, system information, and privacy tool";
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox23.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winaero;
+            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox23.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox23.TabIndex = 10;
+            this.pictureBox23.TabStop = false;
             // 
             // label72
             // 
@@ -940,6 +1126,18 @@ namespace TaskbarAdvancedSettings
             this.label61.TabIndex = 9;
             this.label61.Text = "More features";
             // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label62.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label62.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
+            this.label62.Location = new System.Drawing.Point(249, 15);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(21, 36);
+            this.label62.TabIndex = 11;
+            this.label62.Text = " ";
+            // 
             // panel32
             // 
             this.panel32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -983,6 +1181,17 @@ namespace TaskbarAdvancedSettings
             this.label68.Size = new System.Drawing.Size(153, 15);
             this.label68.TabIndex = 13;
             this.label68.Text = "Start menu and Taskbar style";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox21.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.start11;
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox21.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox21.TabIndex = 10;
+            this.pictureBox21.TabStop = false;
             // 
             // label69
             // 
@@ -1049,6 +1258,16 @@ namespace TaskbarAdvancedSettings
             this.panel37.TabIndex = 16;
             this.panel37.Paint += new System.Windows.Forms.PaintEventHandler(this.drawBluePanelBorder);
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox20.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
+            this.pictureBox20.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox20.TabIndex = 13;
+            this.pictureBox20.TabStop = false;
+            // 
             // label67
             // 
             this.label67.AutoSize = true;
@@ -1088,6 +1307,17 @@ namespace TaskbarAdvancedSettings
             this.label45.TabIndex = 11;
             this.label45.Text = "Taskbar style";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winRetro;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox8.TabIndex = 10;
+            this.pictureBox8.TabStop = false;
+            // 
             // label46
             // 
             this.label46.AutoSize = true;
@@ -1125,6 +1355,16 @@ namespace TaskbarAdvancedSettings
             this.panel36.Size = new System.Drawing.Size(91, 19);
             this.panel36.TabIndex = 16;
             this.panel36.Paint += new System.Windows.Forms.PaintEventHandler(this.drawBluePanelBorder);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox19.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
+            this.pictureBox19.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox19.TabIndex = 13;
+            this.pictureBox19.TabStop = false;
             // 
             // label66
             // 
@@ -1164,6 +1404,17 @@ namespace TaskbarAdvancedSettings
             this.label49.Size = new System.Drawing.Size(153, 15);
             this.label49.TabIndex = 11;
             this.label49.Text = "Start menu and Taskbar style";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.cairo;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox9.TabIndex = 10;
+            this.pictureBox9.TabStop = false;
             // 
             // label50
             // 
@@ -1212,6 +1463,17 @@ namespace TaskbarAdvancedSettings
             this.label55.Size = new System.Drawing.Size(153, 15);
             this.label55.TabIndex = 13;
             this.label55.Text = "Start menu and Taskbar style";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.startisback;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox10.TabIndex = 10;
+            this.pictureBox10.TabStop = false;
             // 
             // label51
             // 
@@ -1267,6 +1529,16 @@ namespace TaskbarAdvancedSettings
             this.panel35.TabIndex = 16;
             this.panel35.Paint += new System.Windows.Forms.PaintEventHandler(this.drawOrangePanelBorder);
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.Image = global::TaskbarAdvancedSettings.Properties.Resources.awards;
+            this.pictureBox18.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox18.TabIndex = 13;
+            this.pictureBox18.TabStop = false;
+            // 
             // label65
             // 
             this.label65.AutoSize = true;
@@ -1291,6 +1563,16 @@ namespace TaskbarAdvancedSettings
             this.panel34.TabIndex = 15;
             this.panel34.Paint += new System.Windows.Forms.PaintEventHandler(this.drawBluePanelBorder);
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
+            this.pictureBox17.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox17.TabIndex = 13;
+            this.pictureBox17.TabStop = false;
+            // 
             // label64
             // 
             this.label64.AutoSize = true;
@@ -1314,6 +1596,17 @@ namespace TaskbarAdvancedSettings
             this.label54.Size = new System.Drawing.Size(89, 15);
             this.label54.TabIndex = 12;
             this.label54.Text = "Start menu style";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.openshell;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -1381,6 +1674,18 @@ namespace TaskbarAdvancedSettings
             this.label36.TabIndex = 9;
             this.label36.Text = "Desktop";
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label37.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
+            this.label37.Location = new System.Drawing.Point(249, 15);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(21, 36);
+            this.label37.TabIndex = 11;
+            this.label37.Text = " ";
+            // 
             // panel19
             // 
             this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1420,6 +1725,23 @@ namespace TaskbarAdvancedSettings
             this.label43.TabIndex = 7;
             this.label43.Text = "Show Advanced settings button in context menu";
             // 
+            // advSettingsInContextMenuBtn
+            // 
+            this.advSettingsInContextMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.advSettingsInContextMenuBtn.BackColor = System.Drawing.Color.Transparent;
+            this.advSettingsInContextMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.advSettingsInContextMenuBtn.FlatAppearance.BorderSize = 0;
+            this.advSettingsInContextMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.advSettingsInContextMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.advSettingsInContextMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.advSettingsInContextMenuBtn.Location = new System.Drawing.Point(886, 23);
+            this.advSettingsInContextMenuBtn.Name = "advSettingsInContextMenuBtn";
+            this.advSettingsInContextMenuBtn.Size = new System.Drawing.Size(40, 20);
+            this.advSettingsInContextMenuBtn.TabIndex = 9;
+            this.advSettingsInContextMenuBtn.TabStop = false;
+            this.advSettingsInContextMenuBtn.UseVisualStyleBackColor = false;
+            this.advSettingsInContextMenuBtn.Click += new System.EventHandler(this.advSettingsInContextMenuBtn_Click);
+            // 
             // advSettingsInContextMenuLbl
             // 
             this.advSettingsInContextMenuLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1456,6 +1778,23 @@ namespace TaskbarAdvancedSettings
             this.label38.Size = new System.Drawing.Size(160, 17);
             this.label38.TabIndex = 7;
             this.label38.Text = "Use legacy context menu";
+            // 
+            // legacyContextMenuBtn
+            // 
+            this.legacyContextMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.legacyContextMenuBtn.BackColor = System.Drawing.Color.Transparent;
+            this.legacyContextMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
+            this.legacyContextMenuBtn.FlatAppearance.BorderSize = 0;
+            this.legacyContextMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.legacyContextMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.legacyContextMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.legacyContextMenuBtn.Location = new System.Drawing.Point(886, 23);
+            this.legacyContextMenuBtn.Name = "legacyContextMenuBtn";
+            this.legacyContextMenuBtn.Size = new System.Drawing.Size(40, 20);
+            this.legacyContextMenuBtn.TabIndex = 9;
+            this.legacyContextMenuBtn.TabStop = false;
+            this.legacyContextMenuBtn.UseVisualStyleBackColor = false;
+            this.legacyContextMenuBtn.Click += new System.EventHandler(this.legacyContextMenuBtn_Click);
             // 
             // legacyContextMenuLbl
             // 
@@ -1673,6 +2012,18 @@ namespace TaskbarAdvancedSettings
             this.label27.TabIndex = 9;
             this.label27.Text = "About";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label28.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label28.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
+            this.label28.Location = new System.Drawing.Point(249, 15);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(21, 36);
+            this.label28.TabIndex = 11;
+            this.label28.Text = " ";
+            // 
             // panel10
             // 
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1701,6 +2052,17 @@ namespace TaskbarAdvancedSettings
             this.aboutVersionLbl.Size = new System.Drawing.Size(87, 12);
             this.aboutVersionLbl.TabIndex = 16;
             this.aboutVersionLbl.Text = "version 11.x.y.mmdd";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox22.Image = global::TaskbarAdvancedSettings.Properties.Resources.aboutLogo;
+            this.pictureBox22.Location = new System.Drawing.Point(21, 22);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(82, 82);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 15;
+            this.pictureBox22.TabStop = false;
             // 
             // label44
             // 
@@ -1736,6 +2098,17 @@ namespace TaskbarAdvancedSettings
             this.panel11.Size = new System.Drawing.Size(978, 66);
             this.panel11.TabIndex = 11;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.githubIcon;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // label29
             // 
@@ -1815,6 +2188,18 @@ namespace TaskbarAdvancedSettings
             this.label24.TabIndex = 9;
             this.label24.Text = "Start menu";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label25.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
+            this.label25.Location = new System.Drawing.Point(249, 15);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(21, 36);
+            this.label25.TabIndex = 11;
+            this.label25.Text = " ";
+            // 
             // startMenuPanel
             // 
             this.startMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1845,6 +2230,19 @@ namespace TaskbarAdvancedSettings
             this.panel30.Click += new System.EventHandler(this.panel29_Click);
             this.panel30.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Location = new System.Drawing.Point(47, 23);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox15.TabIndex = 10;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.panel29_Click);
+            // 
             // label63
             // 
             this.label63.AutoSize = true;
@@ -1873,6 +2271,22 @@ namespace TaskbarAdvancedSettings
             this.panel27.TabIndex = 14;
             this.panel27.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // legacyStartMenuBtn
+            // 
+            this.legacyStartMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.legacyStartMenuBtn.BackColor = System.Drawing.Color.Transparent;
+            this.legacyStartMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
+            this.legacyStartMenuBtn.FlatAppearance.BorderSize = 0;
+            this.legacyStartMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.legacyStartMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.legacyStartMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.legacyStartMenuBtn.Location = new System.Drawing.Point(886, 23);
+            this.legacyStartMenuBtn.Name = "legacyStartMenuBtn";
+            this.legacyStartMenuBtn.Size = new System.Drawing.Size(40, 20);
+            this.legacyStartMenuBtn.TabIndex = 12;
+            this.legacyStartMenuBtn.TabStop = false;
+            this.legacyStartMenuBtn.UseVisualStyleBackColor = false;
+            // 
             // legacyStartMenuLbl
             // 
             this.legacyStartMenuLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1884,6 +2298,17 @@ namespace TaskbarAdvancedSettings
             this.legacyStartMenuLbl.Size = new System.Drawing.Size(26, 17);
             this.legacyStartMenuLbl.TabIndex = 11;
             this.legacyStartMenuLbl.Text = "Off";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winLegacyDisabled;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox12.Location = new System.Drawing.Point(47, 23);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox12.TabIndex = 10;
+            this.pictureBox12.TabStop = false;
             // 
             // label57
             // 
@@ -1911,6 +2336,22 @@ namespace TaskbarAdvancedSettings
             this.panel26.TabIndex = 13;
             this.panel26.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // startMenuSunValleyBtn
+            // 
+            this.startMenuSunValleyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.startMenuSunValleyBtn.BackColor = System.Drawing.Color.Transparent;
+            this.startMenuSunValleyBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
+            this.startMenuSunValleyBtn.FlatAppearance.BorderSize = 0;
+            this.startMenuSunValleyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.startMenuSunValleyBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.startMenuSunValleyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startMenuSunValleyBtn.Location = new System.Drawing.Point(886, 23);
+            this.startMenuSunValleyBtn.Name = "startMenuSunValleyBtn";
+            this.startMenuSunValleyBtn.Size = new System.Drawing.Size(40, 20);
+            this.startMenuSunValleyBtn.TabIndex = 12;
+            this.startMenuSunValleyBtn.TabStop = false;
+            this.startMenuSunValleyBtn.UseVisualStyleBackColor = false;
+            // 
             // startMenuSunValleyLbl
             // 
             this.startMenuSunValleyLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1922,6 +2363,17 @@ namespace TaskbarAdvancedSettings
             this.startMenuSunValleyLbl.Size = new System.Drawing.Size(26, 17);
             this.startMenuSunValleyLbl.TabIndex = 11;
             this.startMenuSunValleyLbl.Text = "Off";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winDisabled;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox11.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
             // 
             // label53
             // 
@@ -1970,12 +2422,12 @@ namespace TaskbarAdvancedSettings
             this.taskbarSettingsPanel.Controls.Add(this.label7);
             this.taskbarSettingsPanel.Location = new System.Drawing.Point(1330, 10);
             this.taskbarSettingsPanel.Name = "taskbarSettingsPanel";
-            this.taskbarSettingsPanel.Size = new System.Drawing.Size(1018, 959);
+            this.taskbarSettingsPanel.Size = new System.Drawing.Size(1018, 952);
             this.taskbarSettingsPanel.TabIndex = 12;
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(20, 943);
+            this.panel5.Location = new System.Drawing.Point(20, 936);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(67, 12);
             this.panel5.TabIndex = 12;
@@ -2002,9 +2454,9 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanel.Controls.Add(this.behaviorsPanelCombineButtons);
             this.behaviorsPanel.Controls.Add(this.label15);
             this.behaviorsPanel.Controls.Add(this.label16);
-            this.behaviorsPanel.Location = new System.Drawing.Point(20, 607);
+            this.behaviorsPanel.Location = new System.Drawing.Point(20, 602);
             this.behaviorsPanel.Name = "behaviorsPanel";
-            this.behaviorsPanel.Size = new System.Drawing.Size(978, 330);
+            this.behaviorsPanel.Size = new System.Drawing.Size(978, 328);
             this.behaviorsPanel.TabIndex = 11;
             this.behaviorsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
@@ -2015,7 +2467,7 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanelTaskbarLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.behaviorsPanelTaskbarLocation.Controls.Add(this.taskbarPositionComboBox);
             this.behaviorsPanelTaskbarLocation.Controls.Add(this.label14);
-            this.behaviorsPanelTaskbarLocation.Location = new System.Drawing.Point(0, 264);
+            this.behaviorsPanelTaskbarLocation.Location = new System.Drawing.Point(0, 262);
             this.behaviorsPanelTaskbarLocation.Name = "behaviorsPanelTaskbarLocation";
             this.behaviorsPanelTaskbarLocation.Size = new System.Drawing.Size(978, 66);
             this.behaviorsPanelTaskbarLocation.TabIndex = 15;
@@ -2057,7 +2509,7 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanelLock.Controls.Add(this.label21);
             this.behaviorsPanelLock.Controls.Add(this.lockTaskbarBtn);
             this.behaviorsPanelLock.Controls.Add(this.lockTaskbarLbl);
-            this.behaviorsPanelLock.Location = new System.Drawing.Point(0, 72);
+            this.behaviorsPanelLock.Location = new System.Drawing.Point(0, 70);
             this.behaviorsPanelLock.Name = "behaviorsPanelLock";
             this.behaviorsPanelLock.Size = new System.Drawing.Size(978, 66);
             this.behaviorsPanelLock.TabIndex = 14;
@@ -2073,6 +2525,23 @@ namespace TaskbarAdvancedSettings
             this.label21.Size = new System.Drawing.Size(108, 17);
             this.label21.TabIndex = 7;
             this.label21.Text = "Lock the taskbar";
+            // 
+            // lockTaskbarBtn
+            // 
+            this.lockTaskbarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lockTaskbarBtn.BackColor = System.Drawing.Color.Transparent;
+            this.lockTaskbarBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.lockTaskbarBtn.FlatAppearance.BorderSize = 0;
+            this.lockTaskbarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.lockTaskbarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lockTaskbarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lockTaskbarBtn.Location = new System.Drawing.Point(886, 23);
+            this.lockTaskbarBtn.Name = "lockTaskbarBtn";
+            this.lockTaskbarBtn.Size = new System.Drawing.Size(40, 20);
+            this.lockTaskbarBtn.TabIndex = 9;
+            this.lockTaskbarBtn.TabStop = false;
+            this.lockTaskbarBtn.UseVisualStyleBackColor = false;
+            this.lockTaskbarBtn.Click += new System.EventHandler(this.lockTaskbarBtn_Click);
             // 
             // lockTaskbarLbl
             // 
@@ -2093,7 +2562,7 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanelSmallButtons.Controls.Add(this.label17);
             this.behaviorsPanelSmallButtons.Controls.Add(this.smallButtonsBtn);
             this.behaviorsPanelSmallButtons.Controls.Add(this.smallButtonsLbl);
-            this.behaviorsPanelSmallButtons.Location = new System.Drawing.Point(0, 136);
+            this.behaviorsPanelSmallButtons.Location = new System.Drawing.Point(0, 134);
             this.behaviorsPanelSmallButtons.Name = "behaviorsPanelSmallButtons";
             this.behaviorsPanelSmallButtons.Size = new System.Drawing.Size(978, 66);
             this.behaviorsPanelSmallButtons.TabIndex = 12;
@@ -2109,6 +2578,23 @@ namespace TaskbarAdvancedSettings
             this.label17.Size = new System.Drawing.Size(166, 17);
             this.label17.TabIndex = 7;
             this.label17.Text = "Use small taskbar buttons";
+            // 
+            // smallButtonsBtn
+            // 
+            this.smallButtonsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.smallButtonsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.smallButtonsBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.smallButtonsBtn.FlatAppearance.BorderSize = 0;
+            this.smallButtonsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.smallButtonsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.smallButtonsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.smallButtonsBtn.Location = new System.Drawing.Point(886, 23);
+            this.smallButtonsBtn.Name = "smallButtonsBtn";
+            this.smallButtonsBtn.Size = new System.Drawing.Size(40, 20);
+            this.smallButtonsBtn.TabIndex = 9;
+            this.smallButtonsBtn.TabStop = false;
+            this.smallButtonsBtn.UseVisualStyleBackColor = false;
+            this.smallButtonsBtn.Click += new System.EventHandler(this.smallButtonsBtn_Click);
             // 
             // smallButtonsLbl
             // 
@@ -2129,7 +2615,7 @@ namespace TaskbarAdvancedSettings
             this.behaviorsPanelCombineButtons.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.behaviorsPanelCombineButtons.Controls.Add(this.taskbarButtonsCombineOption);
             this.behaviorsPanelCombineButtons.Controls.Add(this.label13);
-            this.behaviorsPanelCombineButtons.Location = new System.Drawing.Point(0, 200);
+            this.behaviorsPanelCombineButtons.Location = new System.Drawing.Point(0, 198);
             this.behaviorsPanelCombineButtons.Name = "behaviorsPanelCombineButtons";
             this.behaviorsPanelCombineButtons.Size = new System.Drawing.Size(978, 66);
             this.behaviorsPanelCombineButtons.TabIndex = 11;
@@ -2171,9 +2657,9 @@ namespace TaskbarAdvancedSettings
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label15.Location = new System.Drawing.Point(19, 36);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(328, 15);
+            this.label15.Size = new System.Drawing.Size(263, 15);
             this.label15.TabIndex = 6;
-            this.label15.Text = "Taskbar alignment, buttons combination, automatic hiding, etc.";
+            this.label15.Text = "Taskbar alignment, lock, buttons combination, etc.";
             // 
             // label16
             // 
@@ -2226,6 +2712,19 @@ namespace TaskbarAdvancedSettings
             this.panel33.Click += new System.EventHandler(this.panel29_Click);
             this.panel33.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Location = new System.Drawing.Point(47, 23);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox16.TabIndex = 10;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.panel29_Click);
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -2253,6 +2752,23 @@ namespace TaskbarAdvancedSettings
             this.panel28.TabIndex = 15;
             this.panel28.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // legacyTaskbarBtn
+            // 
+            this.legacyTaskbarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.legacyTaskbarBtn.BackColor = System.Drawing.Color.Transparent;
+            this.legacyTaskbarBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.legacyTaskbarBtn.FlatAppearance.BorderSize = 0;
+            this.legacyTaskbarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.legacyTaskbarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.legacyTaskbarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.legacyTaskbarBtn.Location = new System.Drawing.Point(886, 23);
+            this.legacyTaskbarBtn.Name = "legacyTaskbarBtn";
+            this.legacyTaskbarBtn.Size = new System.Drawing.Size(40, 20);
+            this.legacyTaskbarBtn.TabIndex = 12;
+            this.legacyTaskbarBtn.TabStop = false;
+            this.legacyTaskbarBtn.UseVisualStyleBackColor = false;
+            this.legacyTaskbarBtn.Click += new System.EventHandler(this.taskbarStyle_btn_Click);
+            // 
             // legacyTaskbarLbl
             // 
             this.legacyTaskbarLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2264,6 +2780,17 @@ namespace TaskbarAdvancedSettings
             this.legacyTaskbarLbl.Size = new System.Drawing.Size(26, 17);
             this.legacyTaskbarLbl.TabIndex = 11;
             this.legacyTaskbarLbl.Text = "Off";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winLegacy;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox13.Location = new System.Drawing.Point(47, 23);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox13.TabIndex = 10;
+            this.pictureBox13.TabStop = false;
             // 
             // label59
             // 
@@ -2290,6 +2817,17 @@ namespace TaskbarAdvancedSettings
             this.taskbarSunValleyPanel.TabIndex = 11;
             this.taskbarSunValleyPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.win;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -2300,6 +2838,23 @@ namespace TaskbarAdvancedSettings
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Sun Valley";
+            // 
+            // taskbarStyle_btn
+            // 
+            this.taskbarStyle_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskbarStyle_btn.BackColor = System.Drawing.Color.Transparent;
+            this.taskbarStyle_btn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.taskbarStyle_btn.FlatAppearance.BorderSize = 0;
+            this.taskbarStyle_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.taskbarStyle_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.taskbarStyle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskbarStyle_btn.Location = new System.Drawing.Point(886, 23);
+            this.taskbarStyle_btn.Name = "taskbarStyle_btn";
+            this.taskbarStyle_btn.Size = new System.Drawing.Size(40, 20);
+            this.taskbarStyle_btn.TabIndex = 9;
+            this.taskbarStyle_btn.TabStop = false;
+            this.taskbarStyle_btn.UseVisualStyleBackColor = false;
+            this.taskbarStyle_btn.Click += new System.EventHandler(this.taskbarStyle_btn_Click);
             // 
             // taskbarStyle_lbl
             // 
@@ -2321,10 +2876,10 @@ namespace TaskbarAdvancedSettings
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(19, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(540, 15);
+            this.label3.Size = new System.Drawing.Size(538, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Choose the style of the taskbar - all following advanced options are only availab" +
-    "le for the legacy taskbar";
+            this.label3.Text = "Choose the style of the taskbar - some of the advanced options are only available" +
+    " for the legacy taskbar";
             // 
             // label1
             // 
@@ -2349,7 +2904,7 @@ namespace TaskbarAdvancedSettings
             this.notificationAreaPanel.Controls.Add(this.label11);
             this.notificationAreaPanel.Location = new System.Drawing.Point(20, 332);
             this.notificationAreaPanel.Name = "notificationAreaPanel";
-            this.notificationAreaPanel.Size = new System.Drawing.Size(978, 269);
+            this.notificationAreaPanel.Size = new System.Drawing.Size(978, 264);
             this.notificationAreaPanel.TabIndex = 9;
             this.notificationAreaPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
@@ -2360,7 +2915,7 @@ namespace TaskbarAdvancedSettings
             this.panel12.Controls.Add(this.label18);
             this.panel12.Controls.Add(this.showSecondsBtn);
             this.panel12.Controls.Add(this.showSecondsLbl);
-            this.panel12.Location = new System.Drawing.Point(0, 203);
+            this.panel12.Location = new System.Drawing.Point(0, 198);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(978, 66);
             this.panel12.TabIndex = 16;
@@ -2376,6 +2931,23 @@ namespace TaskbarAdvancedSettings
             this.label18.Size = new System.Drawing.Size(171, 17);
             this.label18.TabIndex = 7;
             this.label18.Text = "Show seconds in tray clock";
+            // 
+            // showSecondsBtn
+            // 
+            this.showSecondsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showSecondsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.showSecondsBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.showSecondsBtn.FlatAppearance.BorderSize = 0;
+            this.showSecondsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.showSecondsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.showSecondsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showSecondsBtn.Location = new System.Drawing.Point(886, 23);
+            this.showSecondsBtn.Name = "showSecondsBtn";
+            this.showSecondsBtn.Size = new System.Drawing.Size(40, 20);
+            this.showSecondsBtn.TabIndex = 9;
+            this.showSecondsBtn.TabStop = false;
+            this.showSecondsBtn.UseVisualStyleBackColor = false;
+            this.showSecondsBtn.Click += new System.EventHandler(this.showSecondsBtn_Click);
             // 
             // showSecondsLbl
             // 
@@ -2395,7 +2967,7 @@ namespace TaskbarAdvancedSettings
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.label20);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel7.Location = new System.Drawing.Point(0, 75);
+            this.panel7.Location = new System.Drawing.Point(0, 70);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(978, 66);
             this.panel7.TabIndex = 15;
@@ -2421,7 +2993,7 @@ namespace TaskbarAdvancedSettings
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.label22);
             this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel8.Location = new System.Drawing.Point(0, 139);
+            this.panel8.Location = new System.Drawing.Point(0, 134);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(978, 66);
             this.panel8.TabIndex = 14;
@@ -2464,489 +3036,6 @@ namespace TaskbarAdvancedSettings
             this.label11.TabIndex = 5;
             this.label11.Text = "Notification area";
             // 
-            // blockingPanel
-            // 
-            this.blockingPanel.BackColor = System.Drawing.Color.Transparent;
-            this.blockingPanel.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.overlay;
-            this.blockingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.blockingPanel.Location = new System.Drawing.Point(240, 1032);
-            this.blockingPanel.Name = "blockingPanel";
-            this.blockingPanel.Size = new System.Drawing.Size(200, 29);
-            this.blockingPanel.TabIndex = 19;
-            this.blockingPanel.Visible = false;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label89.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label89.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
-            this.label89.Location = new System.Drawing.Point(249, 15);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(21, 36);
-            this.label89.TabIndex = 11;
-            this.label89.Text = " ";
-            // 
-            // defaultWebBrowserPictureBox
-            // 
-            this.defaultWebBrowserPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.defaultWebBrowserPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.defaultWebBrowserPictureBox.Location = new System.Drawing.Point(46, 23);
-            this.defaultWebBrowserPictureBox.Name = "defaultWebBrowserPictureBox";
-            this.defaultWebBrowserPictureBox.Size = new System.Drawing.Size(21, 21);
-            this.defaultWebBrowserPictureBox.TabIndex = 11;
-            this.defaultWebBrowserPictureBox.TabStop = false;
-            this.defaultWebBrowserPictureBox.Click += new System.EventHandler(this.panel9_Click);
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Image = global::TaskbarAdvancedSettings.Properties.Resources.freeware;
-            this.pictureBox27.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox27.TabIndex = 13;
-            this.pictureBox27.TabStop = false;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox26.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources._7tt;
-            this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox26.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox26.TabIndex = 10;
-            this.pictureBox26.TabStop = false;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox25.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
-            this.pictureBox25.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox25.TabIndex = 13;
-            this.pictureBox25.TabStop = false;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox24.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.powertoys;
-            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox24.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox24.TabIndex = 10;
-            this.pictureBox24.TabStop = false;
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox28.Image = global::TaskbarAdvancedSettings.Properties.Resources.freeware;
-            this.pictureBox28.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox28.TabIndex = 13;
-            this.pictureBox28.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox23.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winaero;
-            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox23.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox23.TabIndex = 10;
-            this.pictureBox23.TabStop = false;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label62.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label62.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
-            this.label62.Location = new System.Drawing.Point(249, 15);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(21, 36);
-            this.label62.TabIndex = 11;
-            this.label62.Text = " ";
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox21.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.start11;
-            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox21.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox21.TabIndex = 10;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
-            this.pictureBox20.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox20.TabIndex = 13;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winRetro;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
-            this.pictureBox19.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox19.TabIndex = 13;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.cairo;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.startisback;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Image = global::TaskbarAdvancedSettings.Properties.Resources.awards;
-            this.pictureBox18.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox18.TabIndex = 13;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox17.Image = global::TaskbarAdvancedSettings.Properties.Resources.programming;
-            this.pictureBox17.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox17.TabIndex = 13;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.openshell;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label37.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
-            this.label37.Location = new System.Drawing.Point(249, 15);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(21, 36);
-            this.label37.TabIndex = 11;
-            this.label37.Text = " ";
-            // 
-            // advSettingsInContextMenuBtn
-            // 
-            this.advSettingsInContextMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.advSettingsInContextMenuBtn.BackColor = System.Drawing.Color.Transparent;
-            this.advSettingsInContextMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.advSettingsInContextMenuBtn.FlatAppearance.BorderSize = 0;
-            this.advSettingsInContextMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.advSettingsInContextMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.advSettingsInContextMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.advSettingsInContextMenuBtn.Location = new System.Drawing.Point(886, 23);
-            this.advSettingsInContextMenuBtn.Name = "advSettingsInContextMenuBtn";
-            this.advSettingsInContextMenuBtn.Size = new System.Drawing.Size(40, 20);
-            this.advSettingsInContextMenuBtn.TabIndex = 9;
-            this.advSettingsInContextMenuBtn.TabStop = false;
-            this.advSettingsInContextMenuBtn.UseVisualStyleBackColor = false;
-            this.advSettingsInContextMenuBtn.Click += new System.EventHandler(this.advSettingsInContextMenuBtn_Click);
-            // 
-            // legacyContextMenuBtn
-            // 
-            this.legacyContextMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.legacyContextMenuBtn.BackColor = System.Drawing.Color.Transparent;
-            this.legacyContextMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
-            this.legacyContextMenuBtn.FlatAppearance.BorderSize = 0;
-            this.legacyContextMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.legacyContextMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.legacyContextMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.legacyContextMenuBtn.Location = new System.Drawing.Point(886, 23);
-            this.legacyContextMenuBtn.Name = "legacyContextMenuBtn";
-            this.legacyContextMenuBtn.Size = new System.Drawing.Size(40, 20);
-            this.legacyContextMenuBtn.TabIndex = 9;
-            this.legacyContextMenuBtn.TabStop = false;
-            this.legacyContextMenuBtn.UseVisualStyleBackColor = false;
-            this.legacyContextMenuBtn.Click += new System.EventHandler(this.legacyContextMenuBtn_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label28.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
-            this.label28.Location = new System.Drawing.Point(249, 15);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(21, 36);
-            this.label28.TabIndex = 11;
-            this.label28.Text = " ";
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox22.Image = global::TaskbarAdvancedSettings.Properties.Resources.aboutLogo;
-            this.pictureBox22.Location = new System.Drawing.Point(21, 22);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(82, 82);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 15;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.githubIcon;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label25.Image = global::TaskbarAdvancedSettings.Properties.Resources.arrow;
-            this.label25.Location = new System.Drawing.Point(249, 15);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(21, 36);
-            this.label25.TabIndex = 11;
-            this.label25.Text = " ";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
-            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox15.Location = new System.Drawing.Point(47, 23);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox15.TabIndex = 10;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.panel29_Click);
-            // 
-            // legacyStartMenuBtn
-            // 
-            this.legacyStartMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.legacyStartMenuBtn.BackColor = System.Drawing.Color.Transparent;
-            this.legacyStartMenuBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
-            this.legacyStartMenuBtn.FlatAppearance.BorderSize = 0;
-            this.legacyStartMenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.legacyStartMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.legacyStartMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.legacyStartMenuBtn.Location = new System.Drawing.Point(886, 23);
-            this.legacyStartMenuBtn.Name = "legacyStartMenuBtn";
-            this.legacyStartMenuBtn.Size = new System.Drawing.Size(40, 20);
-            this.legacyStartMenuBtn.TabIndex = 12;
-            this.legacyStartMenuBtn.TabStop = false;
-            this.legacyStartMenuBtn.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winLegacyDisabled;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox12.Location = new System.Drawing.Point(47, 23);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox12.TabIndex = 10;
-            this.pictureBox12.TabStop = false;
-            // 
-            // startMenuSunValleyBtn
-            // 
-            this.startMenuSunValleyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.startMenuSunValleyBtn.BackColor = System.Drawing.Color.Transparent;
-            this.startMenuSunValleyBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffStateDisabled;
-            this.startMenuSunValleyBtn.FlatAppearance.BorderSize = 0;
-            this.startMenuSunValleyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.startMenuSunValleyBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.startMenuSunValleyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startMenuSunValleyBtn.Location = new System.Drawing.Point(886, 23);
-            this.startMenuSunValleyBtn.Name = "startMenuSunValleyBtn";
-            this.startMenuSunValleyBtn.Size = new System.Drawing.Size(40, 20);
-            this.startMenuSunValleyBtn.TabIndex = 12;
-            this.startMenuSunValleyBtn.TabStop = false;
-            this.startMenuSunValleyBtn.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winDisabled;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox11.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // lockTaskbarBtn
-            // 
-            this.lockTaskbarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lockTaskbarBtn.BackColor = System.Drawing.Color.Transparent;
-            this.lockTaskbarBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.lockTaskbarBtn.FlatAppearance.BorderSize = 0;
-            this.lockTaskbarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.lockTaskbarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.lockTaskbarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lockTaskbarBtn.Location = new System.Drawing.Point(886, 23);
-            this.lockTaskbarBtn.Name = "lockTaskbarBtn";
-            this.lockTaskbarBtn.Size = new System.Drawing.Size(40, 20);
-            this.lockTaskbarBtn.TabIndex = 9;
-            this.lockTaskbarBtn.TabStop = false;
-            this.lockTaskbarBtn.UseVisualStyleBackColor = false;
-            this.lockTaskbarBtn.Click += new System.EventHandler(this.lockTaskbarBtn_Click);
-            // 
-            // smallButtonsBtn
-            // 
-            this.smallButtonsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.smallButtonsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.smallButtonsBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.smallButtonsBtn.FlatAppearance.BorderSize = 0;
-            this.smallButtonsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.smallButtonsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.smallButtonsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.smallButtonsBtn.Location = new System.Drawing.Point(886, 23);
-            this.smallButtonsBtn.Name = "smallButtonsBtn";
-            this.smallButtonsBtn.Size = new System.Drawing.Size(40, 20);
-            this.smallButtonsBtn.TabIndex = 9;
-            this.smallButtonsBtn.TabStop = false;
-            this.smallButtonsBtn.UseVisualStyleBackColor = false;
-            this.smallButtonsBtn.Click += new System.EventHandler(this.smallButtonsBtn_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox16.Location = new System.Drawing.Point(47, 23);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox16.TabIndex = 10;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.panel29_Click);
-            // 
-            // legacyTaskbarBtn
-            // 
-            this.legacyTaskbarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.legacyTaskbarBtn.BackColor = System.Drawing.Color.Transparent;
-            this.legacyTaskbarBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.legacyTaskbarBtn.FlatAppearance.BorderSize = 0;
-            this.legacyTaskbarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.legacyTaskbarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.legacyTaskbarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.legacyTaskbarBtn.Location = new System.Drawing.Point(886, 23);
-            this.legacyTaskbarBtn.Name = "legacyTaskbarBtn";
-            this.legacyTaskbarBtn.Size = new System.Drawing.Size(40, 20);
-            this.legacyTaskbarBtn.TabIndex = 12;
-            this.legacyTaskbarBtn.TabStop = false;
-            this.legacyTaskbarBtn.UseVisualStyleBackColor = false;
-            this.legacyTaskbarBtn.Click += new System.EventHandler(this.taskbarStyle_btn_Click);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winLegacy;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox13.Location = new System.Drawing.Point(47, 23);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox13.TabIndex = 10;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.win;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // taskbarStyle_btn
-            // 
-            this.taskbarStyle_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskbarStyle_btn.BackColor = System.Drawing.Color.Transparent;
-            this.taskbarStyle_btn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.taskbarStyle_btn.FlatAppearance.BorderSize = 0;
-            this.taskbarStyle_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.taskbarStyle_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.taskbarStyle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskbarStyle_btn.Location = new System.Drawing.Point(886, 23);
-            this.taskbarStyle_btn.Name = "taskbarStyle_btn";
-            this.taskbarStyle_btn.Size = new System.Drawing.Size(40, 20);
-            this.taskbarStyle_btn.TabIndex = 9;
-            this.taskbarStyle_btn.TabStop = false;
-            this.taskbarStyle_btn.UseVisualStyleBackColor = false;
-            this.taskbarStyle_btn.Click += new System.EventHandler(this.taskbarStyle_btn_Click);
-            // 
-            // showSecondsBtn
-            // 
-            this.showSecondsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.showSecondsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.showSecondsBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
-            this.showSecondsBtn.FlatAppearance.BorderSize = 0;
-            this.showSecondsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.showSecondsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.showSecondsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showSecondsBtn.Location = new System.Drawing.Point(886, 23);
-            this.showSecondsBtn.Name = "showSecondsBtn";
-            this.showSecondsBtn.Size = new System.Drawing.Size(40, 20);
-            this.showSecondsBtn.TabIndex = 9;
-            this.showSecondsBtn.TabStop = false;
-            this.showSecondsBtn.UseVisualStyleBackColor = false;
-            this.showSecondsBtn.Click += new System.EventHandler(this.showSecondsBtn_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -2958,95 +3047,6 @@ namespace TaskbarAdvancedSettings
             this.label7.Size = new System.Drawing.Size(21, 36);
             this.label7.TabIndex = 8;
             this.label7.Text = " ";
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox29.TabIndex = 7;
-            this.pictureBox29.TabStop = false;
-            this.pictureBox29.Click += new System.EventHandler(this.panel1_Click);
-            this.pictureBox29.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
-            this.pictureBox29.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = global::TaskbarAdvancedSettings.Properties.Resources.puzzle;
-            this.pictureBox14.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox14.TabIndex = 7;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.panel29_Click);
-            this.pictureBox14.MouseEnter += new System.EventHandler(this.panel29_MouseEnter);
-            this.pictureBox14.MouseLeave += new System.EventHandler(this.panel29_MouseLeave);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::TaskbarAdvancedSettings.Properties.Resources.programIcon;
-            this.pictureBox7.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.panel17_Click);
-            this.pictureBox7.MouseEnter += new System.EventHandler(this.panel17_MouseEnter);
-            this.pictureBox7.MouseLeave += new System.EventHandler(this.panel17_MouseLeave);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::TaskbarAdvancedSettings.Properties.Resources.desktopIcon;
-            this.pictureBox6.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.label39_Click);
-            this.pictureBox6.MouseEnter += new System.EventHandler(this.panel21_MouseEnter);
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.panel21_MouseLeave);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Image = global::TaskbarAdvancedSettings.Properties.Resources.taskbarStartIcon;
-            this.pictureBox5.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.panel16_Click);
-            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::TaskbarAdvancedSettings.Properties.Resources.taskbarIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.panel15_Click);
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.panel15_MouseEnter);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.panel15_MouseLeave);
-            // 
-            // userPictureBox
-            // 
-            this.userPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.userPictureBox.Location = new System.Drawing.Point(19, 19);
-            this.userPictureBox.Name = "userPictureBox";
-            this.userPictureBox.Size = new System.Drawing.Size(60, 60);
-            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPictureBox.TabIndex = 0;
-            this.userPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -3073,22 +3073,30 @@ namespace TaskbarAdvancedSettings
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.defaultAppsPanel.ResumeLayout(false);
             this.defaultAppsPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.defaultWebBrowserPictureBox)).EndInit();
             this.extensionsPanel.ResumeLayout(false);
             this.extensionsPanel.PerformLayout();
             this.panel39.ResumeLayout(false);
@@ -3097,34 +3105,49 @@ namespace TaskbarAdvancedSettings
             this.panel43.PerformLayout();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.panel40.ResumeLayout(false);
             this.panel40.PerformLayout();
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.desktopSettingsPanel.ResumeLayout(false);
             this.desktopSettingsPanel.PerformLayout();
             this.panel19.ResumeLayout(false);
@@ -3143,18 +3166,23 @@ namespace TaskbarAdvancedSettings
             this.panel47.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.startMenuSettingsPanel.ResumeLayout(false);
             this.startMenuSettingsPanel.PerformLayout();
             this.startMenuPanel.ResumeLayout(false);
             this.startMenuPanel.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.taskbarSettingsPanel.ResumeLayout(false);
             this.taskbarSettingsPanel.PerformLayout();
             this.behaviorsPanel.ResumeLayout(false);
@@ -3171,10 +3199,13 @@ namespace TaskbarAdvancedSettings
             this.taskbarStylePanel.PerformLayout();
             this.panel33.ResumeLayout(false);
             this.panel33.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.taskbarSunValleyPanel.ResumeLayout(false);
             this.taskbarSunValleyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.notificationAreaPanel.ResumeLayout(false);
             this.notificationAreaPanel.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -3183,37 +3214,6 @@ namespace TaskbarAdvancedSettings
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.defaultWebBrowserPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

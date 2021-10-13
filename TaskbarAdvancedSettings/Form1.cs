@@ -90,7 +90,7 @@ namespace TaskbarAdvancedSettings
             currentTaskbarButtonCombine = RegistryHelper.Read<int>(RegistryHelper.TaskbarButtonsCombinationRegPath);
             taskbarButtonsCombineOption.SelectedIndex = currentTaskbarButtonCombine;
             currentTaskbarPosition = WindowsHelper.GetCurrentTaskbarPosition();
-            taskbarPositionComboBox.SelectedIndex = (int)currentTaskbarPosition;
+            taskbarPositionComboBox.SelectedItem = currentTaskbarPosition.ToString();
             currentClockSeconds = GetCurrentSecondsClock();
             //currentContextMenu = GetCurrentContextMenu();
             advSettingsInContextMenu = GetAdvSettingsShownInContextMenu();
@@ -211,9 +211,35 @@ namespace TaskbarAdvancedSettings
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOffStateDisabled;
 
                 notificationAreaPanel.Enabled = false;
+                notificationAreaPanel.Visible = false;
+
                 behaviorsPanelLock.Enabled = false;
+                behaviorsPanelLock.Visible = false;
                 behaviorsPanelSmallButtons.Enabled = false;
+                behaviorsPanelSmallButtons.Visible = false;
                 behaviorsPanelCombineButtons.Enabled = false;
+                behaviorsPanelCombineButtons.Visible = false;
+                behaviorsPanel.Height = 136;
+                behaviorsPanel.Location = new Point(20, 332);
+                behaviorsPanelTaskbarLocation.Location = new Point(0, 70);
+
+                taskbarSettingsPanel.Height = 492;
+                panel5.Location = new Point(20, 476);
+
+                taskbarPositionComboBox.Items.Clear();
+                string[] posAv = { "Top", "Bottom" };
+                taskbarPositionComboBox.Items.AddRange(posAv);
+
+                int curTbPos = (int)currentTaskbarPosition;
+                switch(curTbPos)
+                {
+                    case 1:
+                        taskbarPositionComboBox.SelectedIndex = 0;
+                        break;
+                    default:
+                        taskbarPositionComboBox.SelectedIndex = 1;
+                        break;
+                }
             }
             else
             {
@@ -232,9 +258,25 @@ namespace TaskbarAdvancedSettings
                 legacyContextMenuBtn.BackgroundImage = Properties.Resources.switchOnStateDisabled;
 
                 notificationAreaPanel.Enabled = true;
+                notificationAreaPanel.Visible = true;
+
                 behaviorsPanelLock.Enabled = true;
+                behaviorsPanelLock.Visible = true;
                 behaviorsPanelSmallButtons.Enabled = true;
+                behaviorsPanelSmallButtons.Visible = true;
                 behaviorsPanelCombineButtons.Enabled = true;
+                behaviorsPanelCombineButtons.Visible = true;
+                behaviorsPanel.Height = 328;
+                behaviorsPanel.Location = new Point(20, 602);
+                behaviorsPanelTaskbarLocation.Location = new Point(0, 262);
+
+                taskbarSettingsPanel.Height = 952;
+                panel5.Location = new Point(20, 936);
+
+                taskbarPositionComboBox.Items.Clear();
+                string[] posAv = { "Left", "Top", "Right", "Bottom" };
+                taskbarPositionComboBox.Items.AddRange(posAv);
+                taskbarPositionComboBox.SelectedIndex = (int)currentTaskbarPosition;
             }
 
             return CurrentTaskbarStyle;
@@ -252,9 +294,12 @@ namespace TaskbarAdvancedSettings
 
         private void taskbarButtonsCombineOption_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RegistryHelper.Write(RegistryHelper.TaskbarButtonsCombinationRegPath, taskbarButtonsCombineOption.SelectedIndex);
-            if (formShown) WindowsHelper.RefreshLegacyExplorer();
-            currentTaskbarButtonCombine = taskbarButtonsCombineOption.SelectedIndex;
+            if (formShown)
+            {
+                RegistryHelper.Write(RegistryHelper.TaskbarButtonsCombinationRegPath, taskbarButtonsCombineOption.SelectedIndex);
+                WindowsHelper.RefreshLegacyExplorer();
+                currentTaskbarButtonCombine = taskbarButtonsCombineOption.SelectedIndex;
+            }
         }
 
         private void panel8_Click(object sender, EventArgs e)
@@ -367,33 +412,48 @@ namespace TaskbarAdvancedSettings
 
         private void lockTaskbarBtn_Click(object sender, EventArgs e)
         {
-            var updatedValue = (currentLockTaskbar == 0 ? 1 : 0);
-            RegistryHelper.Write(RegistryHelper.TaskbarLockRegPath, updatedValue);
-            currentLockTaskbar = GetCurrentTaskbarLock();
-            if (formShown) WindowsHelper.RefreshLegacyExplorer();
+            if (formShown)
+            {
+                var updatedValue = (currentLockTaskbar == 0 ? 1 : 0);
+                RegistryHelper.Write(RegistryHelper.TaskbarLockRegPath, updatedValue);
+                currentLockTaskbar = GetCurrentTaskbarLock();
+                WindowsHelper.RefreshLegacyExplorer();
+            }
         }
 
         private void smallButtonsBtn_Click(object sender, EventArgs e)
         {
-            var updatedValue = (currentSmallButtons == 0 ? 1 : 0);
-            RegistryHelper.Write(RegistryHelper.TaskbarSmallButtonsRegPath, updatedValue);
-            currentSmallButtons = GetCurrentTaskbarSmallButtons();
-            if (formShown) WindowsHelper.RefreshLegacyExplorer();
+            if (formShown)
+            {
+                var updatedValue = (currentSmallButtons == 0 ? 1 : 0);
+                RegistryHelper.Write(RegistryHelper.TaskbarSmallButtonsRegPath, updatedValue);
+                currentSmallButtons = GetCurrentTaskbarSmallButtons();
+                WindowsHelper.RefreshLegacyExplorer();
+            }
         }
 
         private void taskbarPositionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            WindowsHelper.SetTaskbarPosition((WindowsHelper.TaskbarPosition)taskbarPositionComboBox.SelectedIndex);
-            currentTaskbarPosition = (WindowsHelper.TaskbarPosition)taskbarPositionComboBox.SelectedIndex;
-            if (formShown) WindowsHelper.RestartLegacyExplorer();
+            if (formShown)
+            {
+                WindowsHelper.TaskbarPosition taskbarPosition = (WindowsHelper.TaskbarPosition)Enum.Parse(typeof(WindowsHelper.TaskbarPosition), taskbarPositionComboBox.SelectedItem.ToString(), true);
+
+                WindowsHelper.SetTaskbarPosition(taskbarPosition);
+                currentTaskbarPosition = taskbarPosition;
+                WindowsHelper.RestartLegacyExplorer();
+            }
+
         }
 
         private void showSecondsBtn_Click(object sender, EventArgs e)
         {
-            var updatedValue = (currentClockSeconds == 0 ? 1 : 0);
-            RegistryHelper.Write(RegistryHelper.TaskbarShowClockSecondsRegPath, updatedValue);
-            currentClockSeconds = GetCurrentSecondsClock();
-            if (formShown) WindowsHelper.RestartLegacyExplorer();
+            if (formShown)
+            {
+                var updatedValue = (currentClockSeconds == 0 ? 1 : 0);
+                RegistryHelper.Write(RegistryHelper.TaskbarShowClockSecondsRegPath, updatedValue);
+                currentClockSeconds = GetCurrentSecondsClock();
+                WindowsHelper.RestartLegacyExplorer();
+            }
         }
 
         private int GetCurrentTaskbarLock() {
@@ -593,28 +653,34 @@ namespace TaskbarAdvancedSettings
 
         private void legacyContextMenuBtn_Click(object sender, EventArgs e)
         {
-            if (RegistryHelper.Read<object>(RegistryHelper.DesktopContextMenuRegPath) == null)
+            if (formShown)
             {
-                RegistryHelper.Write<object>(RegistryHelper.DesktopContextMenuRegPath, "", Microsoft.Win32.RegistryValueKind.String);
-            }
-            else
-            {
-                RegistryHelper.Delete(RegistryHelper.DesktopContextMenuRegPath, true);
-            }
+                if (RegistryHelper.Read<object>(RegistryHelper.DesktopContextMenuRegPath) == null)
+                {
+                    RegistryHelper.Write<object>(RegistryHelper.DesktopContextMenuRegPath, "", Microsoft.Win32.RegistryValueKind.String);
+                }
+                else
+                {
+                    RegistryHelper.Delete(RegistryHelper.DesktopContextMenuRegPath, true);
+                }
 
-            currentContextMenu = GetCurrentContextMenu();
+                currentContextMenu = GetCurrentContextMenu();
 
-            // Restart explorer.exe
-            WindowsHelper.RefreshWindowsExplorer();
+                // Restart explorer.exe
+                WindowsHelper.RefreshWindowsExplorer();
+            }
         }
 
         private void advSettingsInContextMenuBtn_Click(object sender, EventArgs e)
         {
-            AddRemoveToolContextMenu(advSettingsInContextMenu);
-            advSettingsInContextMenu = GetAdvSettingsShownInContextMenu();
+            if (formShown)
+            {
+                AddRemoveToolContextMenu(advSettingsInContextMenu);
+                advSettingsInContextMenu = GetAdvSettingsShownInContextMenu();
 
-            // Refresh explorer.exe
-            if (formShown) WindowsHelper.RefreshWindowsExplorer();
+                // Refresh explorer.exe
+                WindowsHelper.RefreshWindowsExplorer();
+            }
         }
 
         private static void AddRemoveToolContextMenu(bool toolRemove = false)
