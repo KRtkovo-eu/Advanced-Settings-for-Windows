@@ -141,6 +141,9 @@ namespace TaskbarAdvancedSettings
         private void Form1_Shown(object sender, EventArgs e)
         {
             formShown = true;
+
+            // Check for update
+            label30_Click(null, null);
         }
 
         private void taskbarStyle_btn_Click(object sender, EventArgs e)
@@ -787,19 +790,22 @@ namespace TaskbarAdvancedSettings
 
         private void label30_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            string latestVersion = NetworkHelper.CheckUpdate();
-            this.Cursor = Cursors.Default;
+            if(NetworkHelper.IsConnectedToInternet())
+            {
+                this.Cursor = Cursors.WaitCursor;
+                string latestVersion = NetworkHelper.CheckUpdate();
+                this.Cursor = Cursors.Default;
 
-            if (latestVersion == Application.ProductVersion)
-            {
-                label30.Text = "Tool is up to date";
-            }
-            else
-            {
-                if (MessageBox.Show("Do you want to download the new version now?", "Update is available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (latestVersion == Application.ProductVersion)
                 {
-                    Process.Start(NetworkHelper.AdvSettingsGithubLink);
+                    label30.Text = "Tool is up to date";
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to download the new version now?", "Update is available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Process.Start(NetworkHelper.AdvSettingsGithubLink);
+                    }
                 }
             }
         }

@@ -30,13 +30,10 @@ namespace TaskbarAdvancedSettings.Helpers
 
             try
             {
-                if (IsConnectedToInternet())
-                {
-                    WebRequest req = HttpWebRequest.Create(AdvSettingsGithubLink);
-                    string resUri;
-                    resUri = req.GetResponse().ResponseUri.AbsoluteUri;
-                    result = resUri.Substring(resUri.LastIndexOf("/") + 1);
-                }
+                WebRequest req = HttpWebRequest.Create(AdvSettingsGithubLink);
+                string resUri;
+                resUri = req.GetResponse().ResponseUri.AbsoluteUri;
+                result = resUri.Substring(resUri.LastIndexOf("/") + 1);
             }
             catch
             {
