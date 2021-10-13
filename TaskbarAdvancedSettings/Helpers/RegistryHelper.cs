@@ -28,8 +28,8 @@ namespace TaskbarAdvancedSettings.Helpers
         public static RegistryKeyValue DesktopContextMenuRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked", "{e2bf9676-5f8f-435c-97eb-11607a5bedf7}");
         public static RegistryKeyValue AdvSettingsInContextMenuRegPath = new RegistryKeyValue(Registry.ClassesRoot, @"Directory\Background\shell\Advanced settings\Command", "");
         public static RegistryKeyValue AdvSettingsInContextMenuRegParentPath = new RegistryKeyValue(Registry.ClassesRoot, @"Directory\Background\shell\Advanced settings", "");
-        public static RegistryKeyValue AdvSettingsFirstRunRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\KRtkovo.eu\Advanced Settings for Windows", "FirstRunDone");
-        public static RegistryKeyValue AdvSettingsInstallLocationRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\KRtkovo.eu\Advanced Settings for Windows", "InstallLocation");
+        public static RegistryKeyValue AdvSettingsFirstRunRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "FirstRunDone");
+        public static RegistryKeyValue AdvSettingsInstallLocationRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "InstallLocation");
         public static RegistryKeyValue EnvironmentUserPATHregPath = new RegistryKeyValue(Registry.CurrentUser, @"Environment", "Path");
 
         public static T Read<T>(RegistryKeyValue regPath)

@@ -243,6 +243,26 @@ namespace TaskbarAdvancedSettings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gradient {
+            get {
+                object obj = ResourceManager.GetObject("gradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_48 {
+            get {
+                object obj = ResourceManager.GetObject("logo_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap openshell {
             get {
                 object obj = ResourceManager.GetObject("openshell", resourceCulture);
@@ -406,6 +426,16 @@ namespace TaskbarAdvancedSettings.Properties {
         internal static System.Drawing.Bitmap taskbarStartIcon {
             get {
                 object obj = ResourceManager.GetObject("taskbarStartIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uac_48 {
+            get {
+                object obj = ResourceManager.GetObject("uac_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

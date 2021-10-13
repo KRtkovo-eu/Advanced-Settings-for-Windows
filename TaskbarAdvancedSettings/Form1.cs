@@ -36,7 +36,7 @@ namespace TaskbarAdvancedSettings
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FirstRun();
+            InstallUpgradeOrRun();
 
             // Visual tweaks
             this.BackColor = ColorTranslator.FromHtml("#f3f3f3");
@@ -610,19 +610,24 @@ namespace TaskbarAdvancedSettings
 
         private void advSettingsInContextMenuBtn_Click(object sender, EventArgs e)
         {
-            if (advSettingsInContextMenu)
-            {
-                RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegPath, true);
-                RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegParentPath, true);
-            }
-            else {
-                RegistryHelper.Write<string>(RegistryHelper.AdvSettingsInContextMenuRegPath, DefaultToolLocation + "\\" + DefaultToolExeName);
-            }
-
+            AddRemoveToolContextMenu(advSettingsInContextMenu);
             advSettingsInContextMenu = GetAdvSettingsShownInContextMenu();
 
             // Refresh explorer.exe
             if (formShown) WindowsHelper.RefreshWindowsExplorer();
+        }
+
+        private static void AddRemoveToolContextMenu(bool toolRemove = false)
+        {
+            if (toolRemove)
+            {
+                RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegPath, true);
+                RegistryHelper.Delete(RegistryHelper.AdvSettingsInContextMenuRegParentPath, true);
+            }
+            else
+            {
+                RegistryHelper.Write<string>(RegistryHelper.AdvSettingsInContextMenuRegPath, DefaultToolLocation + "\\" + DefaultToolExeName);
+            }
         }
 
         private int GetCurrentTaskbarSmallButtons()
@@ -784,23 +789,54 @@ namespace TaskbarAdvancedSettings
 
         }
 
-        private void FirstRun()
+        private void InstallUpgradeOrRun()
         {
-            int isFirstRunDone = RegistryHelper.Read<int>(RegistryHelper.AdvSettingsFirstRunRegPath);
-            if (isFirstRunDone == 0)
+            string versionInstalled = RegistryHelper.Read<string>(RegistryHelper.AdvSettingsFirstRunRegPath);
+
+            // Tool is not installed
+            if (versionInstalled == null || versionInstalled == "")
             {
-                // Install tool
+                // Show RunOrInstall dialog
+                var runOrInstallDialog = new FormInstall().ShowDialog();
+                if(runOrInstallDialog != DialogResult.Cancel)
+                {
+                    // Install tool
+                    string currentFileName = Process.GetCurrentProcess().MainModule.FileName;
+                    Directory.CreateDirectory(DefaultToolLocation);
+                    File.Copy(currentFileName, DefaultToolLocation + "\\" + DefaultToolExeName, true);
+                    RegistryHelper.Write(RegistryHelper.AdvSettingsInstallLocationRegPath, DefaultToolLocation + "\\" + DefaultToolExeName);
+
+                    // Update environment variable PATH with tool path
+                    string currentUserPATH = Environment.GetEnvironmentVariable("path", EnvironmentVariableTarget.User);
+                    string newUserPATH = currentUserPATH + (currentUserPATH.EndsWith(";") ? "" : ";") + DefaultToolLocation + ";";
+                    RegistryHelper.Write(RegistryHelper.EnvironmentUserPATHregPath, newUserPATH);
+
+                    // Set current version to the registry
+                    RegistryHelper.Write(RegistryHelper.AdvSettingsFirstRunRegPath, Application.ProductVersion);
+
+                    // Add tool to the Windows context menu
+                    AddRemoveToolContextMenu();
+
+                    // Restart tool from installed location
+                    Process.Start(DefaultToolLocation + "\\" + DefaultToolExeName);
+                    Process.GetCurrentProcess().Kill();
+                }
+            }
+            // Tool was installed and current running version is newer
+            else if(versionInstalled != Application.ProductVersion)
+            {
+                // Upgrade tool
                 string currentFileName = Process.GetCurrentProcess().MainModule.FileName;
                 Directory.CreateDirectory(DefaultToolLocation);
                 File.Copy(currentFileName, DefaultToolLocation + "\\" + DefaultToolExeName, true);
                 RegistryHelper.Write(RegistryHelper.AdvSettingsInstallLocationRegPath, DefaultToolLocation + "\\" + DefaultToolExeName);
 
-                // Update environment variable PATH with tool path
-                string currentUserPATH = Environment.GetEnvironmentVariable("path", EnvironmentVariableTarget.User);
-                string newUserPATH = currentUserPATH + (currentUserPATH.EndsWith(";") ? "" : ";") + DefaultToolLocation + ";";
-                RegistryHelper.Write(RegistryHelper.EnvironmentUserPATHregPath, newUserPATH);
+                // Set current version to the registry
+                RegistryHelper.Write(RegistryHelper.AdvSettingsFirstRunRegPath, Application.ProductVersion);
 
-                RegistryHelper.Write(RegistryHelper.AdvSettingsFirstRunRegPath, 1);
+                // Restart tool from installed location
+                Process.Start(DefaultToolLocation + "\\" + DefaultToolExeName);
+                Process.GetCurrentProcess().Kill();
             }
         }
 

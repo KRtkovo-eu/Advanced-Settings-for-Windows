@@ -118,6 +118,12 @@
     <Compile Include="FormDialogDefaultApp.Designer.cs">
       <DependentUpon>FormDialogDefaultApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstall.Designer.cs">
+      <DependentUpon>FormInstall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\NetworkHelper.cs" />
     <Compile Include="Helpers\RegistryHelper.cs" />
     <Compile Include="Helpers\WindowsHelper.cs" />
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDialogDefaultApp.resx">
       <DependentUpon>FormDialogDefaultApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInstall.resx">
+      <DependentUpon>FormInstall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo3.ico" />
+    <None Include="Misc\logo_48.png" />
+    <None Include="Misc\gradient.png" />
+    <None Include="Misc\uac_48.png" />
     <None Include="Misc\browser\waterfox_48.png" />
     <None Include="Misc\browser\waterfox_21.png" />
     <None Include="Misc\browser\vivaldi_48.png" />

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Advanced Settings")]
 [assembly: AssemblyDescription("Wrapper for registry value changes modifying behavior and look of Windows Taskbar and Windows Start menu")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("KRtkovo.eu, Ondřej Kotas")]
+[assembly: AssemblyCompany("KRtkovo.eu - Ondřej Kotas")]
 [assembly: AssemblyProduct("Advanced Settings")]
 [assembly: AssemblyCopyright("GNU GPL v3, 2021")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("11.0.1.1012")]
-[assembly: AssemblyFileVersion("11.0.1.1012")]
+[assembly: AssemblyVersion("11.0.1.1013")]
+[assembly: AssemblyFileVersion("11.0.1.1013")]
