@@ -136,6 +136,8 @@ namespace TaskbarAdvancedSettings
 
             DefaultWebBrowserIcon = WindowsHelper.GetDefaultWebBrowser().BrowserInfo.IconSmall;
             defaultWebBrowserPictureBox.Image = DefaultWebBrowserIcon;
+
+            uninstallTool.Visible = !runOnce;
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -482,11 +484,15 @@ namespace TaskbarAdvancedSettings
             {
                 panel15.BackColor = Color.Transparent;
             }
+            else
+            {
+                panel15.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            }
         }
 
         private void panel15_MouseEnter(object sender, EventArgs e)
         {
-            panel15.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel15.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void panel15_Click(object sender, EventArgs e)
@@ -508,7 +514,7 @@ namespace TaskbarAdvancedSettings
 
         private void pictureBox5_MouseEnter(object sender, EventArgs e)
         {
-            panel16.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel16.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void pictureBox5_MouseLeave(object sender, EventArgs e)
@@ -516,6 +522,10 @@ namespace TaskbarAdvancedSettings
             if (!startMenuSettingsPanel.Visible)
             {
                 panel16.BackColor = Color.Transparent;
+            }
+            else
+            {
+                panel16.BackColor = ColorTranslator.FromHtml("#eaeaea");
             }
         }
 
@@ -553,7 +563,7 @@ namespace TaskbarAdvancedSettings
 
         private void panel21_MouseEnter(object sender, EventArgs e)
         {
-            panel21.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel21.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void panel21_MouseLeave(object sender, EventArgs e)
@@ -562,11 +572,15 @@ namespace TaskbarAdvancedSettings
             {
                 panel21.BackColor = Color.Transparent;
             }
+            else
+            {
+                panel21.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            }
         }
 
         private void panel17_MouseEnter(object sender, EventArgs e)
         {
-            panel17.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel17.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void panel17_MouseLeave(object sender, EventArgs e)
@@ -575,12 +589,16 @@ namespace TaskbarAdvancedSettings
             {
                 panel17.BackColor = Color.Transparent;
             }
+            else
+            {
+                panel17.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            }
         }
 
 
         private void panel29_MouseEnter(object sender, EventArgs e)
         {
-            panel29.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel29.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void panel29_MouseLeave(object sender, EventArgs e)
@@ -588,6 +606,10 @@ namespace TaskbarAdvancedSettings
             if (!extensionsPanel.Visible)
             {
                 panel29.BackColor = Color.Transparent;
+            }
+            else
+            {
+                panel29.BackColor = ColorTranslator.FromHtml("#eaeaea");
             }
         }
 
@@ -627,7 +649,7 @@ namespace TaskbarAdvancedSettings
 
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
-            panel1.BackColor = ColorTranslator.FromHtml("#eaeaea");
+            panel1.BackColor = ColorTranslator.FromHtml("#ededed");
         }
 
         private void panel1_MouseLeave(object sender, EventArgs e)
@@ -635,6 +657,10 @@ namespace TaskbarAdvancedSettings
             if (!defaultAppsPanel.Visible)
             {
                 panel1.BackColor = Color.Transparent;
+            }
+            else
+            {
+                panel1.BackColor = ColorTranslator.FromHtml("#eaeaea");
             }
         }
 
@@ -849,6 +875,21 @@ namespace TaskbarAdvancedSettings
         private void label93_Click(object sender, EventArgs e)
         {
             Process.Start("https://kolbi.cz/blog/2017/11/10/setdefaultbrowser-set-the-default-browser-per-user-on-windows-10-and-server-2016-build-1607/");
+        }
+
+        private void uninstallTool_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Do you really want to hurt me?" + Environment.NewLine + "Do you really want to make me cry?" + Environment.NewLine + Environment.NewLine + "Do you really want to uninstall this tool?", "Are you sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                AddRemoveToolContextMenu(true);
+
+                RegistryHelper.Delete(RegistryHelper.AdvSettingsFirstRunRegPath);
+                RegistryHelper.Delete(RegistryHelper.AdvSettingsInstallLocationRegPath, true);
+
+                Directory.Delete(DefaultToolLocation, true);
+
+                uninstallTool.Visible = false;
+            }
         }
 
         private void label100_Click(object sender, EventArgs e)

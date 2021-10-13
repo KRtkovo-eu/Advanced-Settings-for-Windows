@@ -248,6 +248,7 @@ namespace TaskbarAdvancedSettings
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.uninstallTool = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -631,14 +632,14 @@ namespace TaskbarAdvancedSettings
             this.defaultAppsPanel.Controls.Add(this.label88);
             this.defaultAppsPanel.Controls.Add(this.label89);
             this.defaultAppsPanel.Controls.Add(this.panel4);
-            this.defaultAppsPanel.Location = new System.Drawing.Point(2354, 764);
+            this.defaultAppsPanel.Location = new System.Drawing.Point(307, 668);
             this.defaultAppsPanel.Name = "defaultAppsPanel";
-            this.defaultAppsPanel.Size = new System.Drawing.Size(1018, 227);
+            this.defaultAppsPanel.Size = new System.Drawing.Size(1018, 222);
             this.defaultAppsPanel.TabIndex = 18;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(20, 209);
+            this.panel3.Location = new System.Drawing.Point(20, 204);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(67, 12);
             this.panel3.TabIndex = 13;
@@ -686,7 +687,7 @@ namespace TaskbarAdvancedSettings
             this.panel4.Controls.Add(this.label95);
             this.panel4.Location = new System.Drawing.Point(20, 62);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(978, 141);
+            this.panel4.Size = new System.Drawing.Size(978, 136);
             this.panel4.TabIndex = 10;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
@@ -697,7 +698,7 @@ namespace TaskbarAdvancedSettings
             this.panel9.Controls.Add(this.defaultWebBrowserPictureBox);
             this.panel9.Controls.Add(this.label90);
             this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel9.Location = new System.Drawing.Point(0, 75);
+            this.panel9.Location = new System.Drawing.Point(0, 70);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(978, 66);
             this.panel9.TabIndex = 15;
@@ -2029,6 +2030,7 @@ namespace TaskbarAdvancedSettings
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel10.Controls.Add(this.uninstallTool);
             this.panel10.Controls.Add(this.aboutVersionLbl);
             this.panel10.Controls.Add(this.pictureBox22);
             this.panel10.Controls.Add(this.label44);
@@ -3048,6 +3050,21 @@ namespace TaskbarAdvancedSettings
             this.label7.TabIndex = 8;
             this.label7.Text = " ";
             // 
+            // uninstallTool
+            // 
+            this.uninstallTool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uninstallTool.AutoSize = true;
+            this.uninstallTool.BackColor = System.Drawing.Color.Transparent;
+            this.uninstallTool.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uninstallTool.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uninstallTool.ForeColor = System.Drawing.Color.Firebrick;
+            this.uninstallTool.Location = new System.Drawing.Point(814, 54);
+            this.uninstallTool.Name = "uninstallTool";
+            this.uninstallTool.Size = new System.Drawing.Size(112, 17);
+            this.uninstallTool.TabIndex = 17;
+            this.uninstallTool.Text = "Uninstall the tool";
+            this.uninstallTool.Click += new System.EventHandler(this.uninstallTool_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3438,6 +3455,7 @@ namespace TaskbarAdvancedSettings
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label uninstallTool;
     }
 }
 
