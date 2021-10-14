@@ -264,10 +264,10 @@ namespace TaskbarAdvancedSettings
                 taskbarStyle_btn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
                 pictureBox1.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
 
-                startMenuSunValleyPanel.Enabled = true;
+                startMenuSunValleyPanel.Enabled = !runningWindowsLegacy;
                 startMenuSunValleyLbl.Text = "Off";
-                startMenuSunValleyPictureBox.BackgroundImage = Properties.Resources.win;
-                startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOffState;
+                startMenuSunValleyPictureBox.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
+                startMenuSunValleyBtn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
 
                 legacyTaskbarLbl.Text = "On";
                 legacyTaskbarBtn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOnStateDisabled : Properties.Resources.switchOnState;
@@ -799,7 +799,7 @@ namespace TaskbarAdvancedSettings
             else
             {
                 startMenuSunValleyLbl.Text = "Off";
-                startMenuSunValleyBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOffState : Properties.Resources.switchOffStateDisabled;
+                startMenuSunValleyBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? (runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState) : Properties.Resources.switchOffStateDisabled;
             }
             return result;
         }
