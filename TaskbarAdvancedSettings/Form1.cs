@@ -17,7 +17,7 @@ namespace TaskbarAdvancedSettings
             SunValley = 0
         }
         private TaskbarStyle currentTaskbarStyle;
-        private int currentTaskbarButtonCombine, currentLockTaskbar, currentSmallButtons, currentClockSeconds;
+        private int currentTaskbarButtonCombine, currentLockTaskbar, currentSmallButtons, currentClockSeconds, mmTaskbarShowOnAll, mmTaskbarCombineButtons, mmTaskbarShowButtonsOn;
         private WindowsHelper.TaskbarPosition currentTaskbarPosition;
         private bool advSettingsInContextMenu;
         private bool runningWindowsLegacy = false; //false = Windows 11, true = Windows 10, Server 2016-2022
@@ -94,6 +94,12 @@ namespace TaskbarAdvancedSettings
             currentClockSeconds = GetCurrentSecondsClock();
             //currentContextMenu = GetCurrentContextMenu();
             advSettingsInContextMenu = GetAdvSettingsShownInContextMenu();
+            mmTaskbarShowOnAll = GetMMTaskbarShowOnAll();
+            mmTaskbarCombineButtons = RegistryHelper.Read<int>(RegistryHelper.MMTaskbarButtonsCombinationRegPath);
+            multipleDisplaysCombineButtonsComboBox.SelectedIndex = mmTaskbarCombineButtons;
+            mmTaskbarShowButtonsOn = RegistryHelper.Read<int>(RegistryHelper.MMTaskbarShowButtonsRegPath);
+            multipleDisplaysShowButtonsOnComboBox.SelectedIndex = mmTaskbarShowButtonsOn;
+
 
             // Visual things on load
             GraphicsPath gp = new GraphicsPath();
@@ -227,9 +233,13 @@ namespace TaskbarAdvancedSettings
                 behaviorsPanel.Height = 136;
                 behaviorsPanel.Location = new Point(20, 332);
                 behaviorsPanelTaskbarLocation.Location = new Point(0, 70);
+                mmTaskbarCombineButtonsPanel.Enabled = false;
+                mmTaskbarCombineButtonsPanel.Visible = false;
+                multipleDisplaysPanel.Height = 198;
+                multipleDisplaysPanel.Location = new Point(20, 474);
 
-                taskbarSettingsPanel.Height = 492;
-                panel5.Location = new Point(20, 476);
+                taskbarSettingsPanel.Height = 696;
+                panel5.Location = new Point(20, 680);
 
                 taskbarPositionComboBox.Items.Clear();
                 string[] posAv = { "Top", "Bottom" };
@@ -274,9 +284,13 @@ namespace TaskbarAdvancedSettings
                 behaviorsPanel.Height = 328;
                 behaviorsPanel.Location = new Point(20, 602);
                 behaviorsPanelTaskbarLocation.Location = new Point(0, 262);
+                mmTaskbarCombineButtonsPanel.Enabled = true;
+                mmTaskbarCombineButtonsPanel.Visible = true;
+                multipleDisplaysPanel.Height = 264;
+                multipleDisplaysPanel.Location = new Point(20, 936);
 
                 taskbarSettingsPanel.Height = 952;
-                panel5.Location = new Point(20, 936);
+                panel5.Location = new Point(20, 1206);
 
                 taskbarPositionComboBox.Items.Clear();
                 string[] posAv = { "Left", "Top", "Right", "Bottom" };
@@ -877,6 +891,26 @@ namespace TaskbarAdvancedSettings
             Process.Start("https://kolbi.cz/blog/2017/11/10/setdefaultbrowser-set-the-default-browser-per-user-on-windows-10-and-server-2016-build-1607/");
         }
 
+        private void multipleDisplaysShowButtonsOnComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (formShown)
+            {
+                RegistryHelper.Write(RegistryHelper.MMTaskbarShowButtonsRegPath, multipleDisplaysShowButtonsOnComboBox.SelectedIndex);
+                WindowsHelper.RefreshLegacyExplorer();
+                mmTaskbarShowButtonsOn = multipleDisplaysShowButtonsOnComboBox.SelectedIndex;
+            }
+        }
+
+        private void multipleDisplaysCombineButtonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (formShown)
+            {
+                RegistryHelper.Write(RegistryHelper.MMTaskbarButtonsCombinationRegPath, multipleDisplaysCombineButtonsComboBox.SelectedIndex);
+                WindowsHelper.RefreshLegacyExplorer();
+                mmTaskbarCombineButtons = multipleDisplaysCombineButtonsComboBox.SelectedIndex;
+            }
+        }
+
         private void uninstallTool_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Do you really want to hurt me?" + Environment.NewLine + "Do you really want to make me cry?" + Environment.NewLine + Environment.NewLine + "Do you really want to uninstall this tool?", "Are you sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -890,6 +924,35 @@ namespace TaskbarAdvancedSettings
 
                 uninstallTool.Visible = false;
             }
+        }
+
+        private void multipleDisplaysShowTaskbarOnAllBtn_Click(object sender, EventArgs e)
+        {
+            if (formShown)
+            {
+                var updatedValue = (mmTaskbarShowOnAll == 0 ? 1 : 0);
+                RegistryHelper.Write(RegistryHelper.MMTaskbarShowOnAllDisplaysRegPath, updatedValue);
+                mmTaskbarShowOnAll = GetMMTaskbarShowOnAll();
+                WindowsHelper.RefreshLegacyExplorer();
+            }
+        }
+
+        private int GetMMTaskbarShowOnAll()
+        {
+            int current = RegistryHelper.Read<int>(RegistryHelper.MMTaskbarShowOnAllDisplaysRegPath);
+
+            if (current == 1)
+            {
+                multipleDisplaysShowTaskbarOnAllLbl.Text = "On";
+                multipleDisplaysShowTaskbarOnAllBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOnState : Properties.Resources.switchOnStateDisabled;
+            }
+            else
+            {
+                multipleDisplaysShowTaskbarOnAllLbl.Text = "Off";
+                multipleDisplaysShowTaskbarOnAllBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOffState : Properties.Resources.switchOffStateDisabled;
+            }
+
+            return current;
         }
 
         private void label100_Click(object sender, EventArgs e)

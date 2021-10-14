@@ -25,12 +25,19 @@ namespace TaskbarAdvancedSettings.Helpers
         public static RegistryKeyValue TaskbarSmallButtonsRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "TaskbarSmallIcons");
         public static RegistryKeyValue TaskbarLocationRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3", "Settings");
         public static RegistryKeyValue TaskbarShowClockSecondsRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "ShowSecondsInSystemClock");
+
+        public static RegistryKeyValue MMTaskbarShowOnAllDisplaysRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "MMTaskbarEnabled");
+        public static RegistryKeyValue MMTaskbarButtonsCombinationRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "MMTaskbarGlomLevel");
+        public static RegistryKeyValue MMTaskbarShowButtonsRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "MMTaskbarMode");
+
         public static RegistryKeyValue DesktopContextMenuRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked", "{e2bf9676-5f8f-435c-97eb-11607a5bedf7}");
+
         public static RegistryKeyValue AdvSettingsInContextMenuRegPath = new RegistryKeyValue(Registry.ClassesRoot, @"Directory\Background\shell\Advanced settings\Command", "");
         public static RegistryKeyValue AdvSettingsInContextMenuRegParentPath = new RegistryKeyValue(Registry.ClassesRoot, @"Directory\Background\shell\Advanced settings", "");
         public static RegistryKeyValue AdvSettingsFirstRunRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "FirstRunDone");
         public static RegistryKeyValue AdvSettingsInstallLocationRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "InstallLocation");
         public static RegistryKeyValue EnvironmentUserPATHregPath = new RegistryKeyValue(Registry.CurrentUser, @"Environment", "Path");
+
 
         public static T Read<T>(RegistryKeyValue regPath)
         {

@@ -17,4 +17,8 @@
     </StartWorkingDirectory>
     <AuthenticationMode>Windows</AuthenticationMode>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>192.168.42.245</RemoteDebugMachine>
+  </PropertyGroup>
 </Project>

@@ -169,6 +169,7 @@ namespace TaskbarAdvancedSettings
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.uninstallTool = new System.Windows.Forms.Label();
             this.aboutVersionLbl = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.label44 = new System.Windows.Forms.Label();
@@ -202,6 +203,19 @@ namespace TaskbarAdvancedSettings
             this.taskbarSettingsPanel = new TaskbarAdvancedSettings.AutoScrollPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.multipleDisplaysPanel = new System.Windows.Forms.Panel();
+            this.mmTaskbarCombineButtonsPanel = new System.Windows.Forms.Panel();
+            this.multipleDisplaysCombineButtonsComboBox = new System.Windows.Forms.ComboBox();
+            this.label101 = new System.Windows.Forms.Label();
+            this.mmTaskbarShowOnAllPanel = new System.Windows.Forms.Panel();
+            this.label102 = new System.Windows.Forms.Label();
+            this.multipleDisplaysShowTaskbarOnAllBtn = new System.Windows.Forms.Button();
+            this.multipleDisplaysShowTaskbarOnAllLbl = new System.Windows.Forms.Label();
+            this.mmTaskbarShowButtonsOnPanel = new System.Windows.Forms.Panel();
+            this.multipleDisplaysShowButtonsOnComboBox = new System.Windows.Forms.ComboBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
             this.behaviorsPanel = new System.Windows.Forms.Panel();
             this.behaviorsPanelTaskbarLocation = new System.Windows.Forms.Panel();
             this.taskbarPositionComboBox = new System.Windows.Forms.ComboBox();
@@ -248,7 +262,6 @@ namespace TaskbarAdvancedSettings
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.uninstallTool = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -321,6 +334,10 @@ namespace TaskbarAdvancedSettings
             this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.taskbarSettingsPanel.SuspendLayout();
+            this.multipleDisplaysPanel.SuspendLayout();
+            this.mmTaskbarCombineButtonsPanel.SuspendLayout();
+            this.mmTaskbarShowOnAllPanel.SuspendLayout();
+            this.mmTaskbarShowButtonsOnPanel.SuspendLayout();
             this.behaviorsPanel.SuspendLayout();
             this.behaviorsPanelTaskbarLocation.SuspendLayout();
             this.behaviorsPanelLock.SuspendLayout();
@@ -2043,6 +2060,21 @@ namespace TaskbarAdvancedSettings
             this.panel10.TabIndex = 10;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
+            // uninstallTool
+            // 
+            this.uninstallTool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uninstallTool.AutoSize = true;
+            this.uninstallTool.BackColor = System.Drawing.Color.Transparent;
+            this.uninstallTool.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uninstallTool.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uninstallTool.ForeColor = System.Drawing.Color.Firebrick;
+            this.uninstallTool.Location = new System.Drawing.Point(814, 54);
+            this.uninstallTool.Name = "uninstallTool";
+            this.uninstallTool.Size = new System.Drawing.Size(112, 17);
+            this.uninstallTool.TabIndex = 17;
+            this.uninstallTool.Text = "Uninstall the tool";
+            this.uninstallTool.Click += new System.EventHandler(this.uninstallTool_Click);
+            // 
             // aboutVersionLbl
             // 
             this.aboutVersionLbl.AutoSize = true;
@@ -2417,6 +2449,7 @@ namespace TaskbarAdvancedSettings
             this.taskbarSettingsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskbarSettingsPanel.Controls.Add(this.panel5);
             this.taskbarSettingsPanel.Controls.Add(this.label6);
+            this.taskbarSettingsPanel.Controls.Add(this.multipleDisplaysPanel);
             this.taskbarSettingsPanel.Controls.Add(this.behaviorsPanel);
             this.taskbarSettingsPanel.Controls.Add(this.label2);
             this.taskbarSettingsPanel.Controls.Add(this.taskbarStylePanel);
@@ -2424,12 +2457,12 @@ namespace TaskbarAdvancedSettings
             this.taskbarSettingsPanel.Controls.Add(this.label7);
             this.taskbarSettingsPanel.Location = new System.Drawing.Point(1330, 10);
             this.taskbarSettingsPanel.Name = "taskbarSettingsPanel";
-            this.taskbarSettingsPanel.Size = new System.Drawing.Size(1018, 952);
+            this.taskbarSettingsPanel.Size = new System.Drawing.Size(1018, 1051);
             this.taskbarSettingsPanel.TabIndex = 12;
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(20, 936);
+            this.panel5.Location = new System.Drawing.Point(20, 1206);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(67, 12);
             this.panel5.TabIndex = 12;
@@ -2444,6 +2477,180 @@ namespace TaskbarAdvancedSettings
             this.label6.Size = new System.Drawing.Size(237, 36);
             this.label6.TabIndex = 7;
             this.label6.Text = "Advanced settings";
+            // 
+            // multipleDisplaysPanel
+            // 
+            this.multipleDisplaysPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.multipleDisplaysPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.multipleDisplaysPanel.Controls.Add(this.mmTaskbarCombineButtonsPanel);
+            this.multipleDisplaysPanel.Controls.Add(this.mmTaskbarShowOnAllPanel);
+            this.multipleDisplaysPanel.Controls.Add(this.mmTaskbarShowButtonsOnPanel);
+            this.multipleDisplaysPanel.Controls.Add(this.label107);
+            this.multipleDisplaysPanel.Controls.Add(this.label108);
+            this.multipleDisplaysPanel.Location = new System.Drawing.Point(20, 936);
+            this.multipleDisplaysPanel.Name = "multipleDisplaysPanel";
+            this.multipleDisplaysPanel.Size = new System.Drawing.Size(978, 264);
+            this.multipleDisplaysPanel.TabIndex = 20;
+            this.multipleDisplaysPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // mmTaskbarCombineButtonsPanel
+            // 
+            this.mmTaskbarCombineButtonsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mmTaskbarCombineButtonsPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mmTaskbarCombineButtonsPanel.Controls.Add(this.multipleDisplaysCombineButtonsComboBox);
+            this.mmTaskbarCombineButtonsPanel.Controls.Add(this.label101);
+            this.mmTaskbarCombineButtonsPanel.Location = new System.Drawing.Point(0, 198);
+            this.mmTaskbarCombineButtonsPanel.Name = "mmTaskbarCombineButtonsPanel";
+            this.mmTaskbarCombineButtonsPanel.Size = new System.Drawing.Size(978, 66);
+            this.mmTaskbarCombineButtonsPanel.TabIndex = 15;
+            this.mmTaskbarCombineButtonsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // multipleDisplaysCombineButtonsComboBox
+            // 
+            this.multipleDisplaysCombineButtonsComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.multipleDisplaysCombineButtonsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.multipleDisplaysCombineButtonsComboBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.multipleDisplaysCombineButtonsComboBox.FormattingEnabled = true;
+            this.multipleDisplaysCombineButtonsComboBox.Items.AddRange(new object[] {
+            "Always, hide labels",
+            "When taskbar is full",
+            "Never"});
+            this.multipleDisplaysCombineButtonsComboBox.Location = new System.Drawing.Point(699, 22);
+            this.multipleDisplaysCombineButtonsComboBox.Name = "multipleDisplaysCombineButtonsComboBox";
+            this.multipleDisplaysCombineButtonsComboBox.Size = new System.Drawing.Size(227, 25);
+            this.multipleDisplaysCombineButtonsComboBox.TabIndex = 9;
+            this.multipleDisplaysCombineButtonsComboBox.SelectedIndexChanged += new System.EventHandler(this.multipleDisplaysCombineButtonsComboBox_SelectedIndexChanged);
+            this.multipleDisplaysCombineButtonsComboBox.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.comboBox_MouseWheel);
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.BackColor = System.Drawing.Color.Transparent;
+            this.label101.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label101.Location = new System.Drawing.Point(43, 25);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(226, 17);
+            this.label101.TabIndex = 7;
+            this.label101.Text = "Combine buttons on other taskbars";
+            // 
+            // mmTaskbarShowOnAllPanel
+            // 
+            this.mmTaskbarShowOnAllPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mmTaskbarShowOnAllPanel.Controls.Add(this.label102);
+            this.mmTaskbarShowOnAllPanel.Controls.Add(this.multipleDisplaysShowTaskbarOnAllBtn);
+            this.mmTaskbarShowOnAllPanel.Controls.Add(this.multipleDisplaysShowTaskbarOnAllLbl);
+            this.mmTaskbarShowOnAllPanel.Location = new System.Drawing.Point(0, 70);
+            this.mmTaskbarShowOnAllPanel.Name = "mmTaskbarShowOnAllPanel";
+            this.mmTaskbarShowOnAllPanel.Size = new System.Drawing.Size(978, 66);
+            this.mmTaskbarShowOnAllPanel.TabIndex = 14;
+            this.mmTaskbarShowOnAllPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.BackColor = System.Drawing.Color.Transparent;
+            this.label102.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label102.Location = new System.Drawing.Point(43, 24);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(179, 17);
+            this.label102.TabIndex = 7;
+            this.label102.Text = "Show taskbar on all displays";
+            // 
+            // multipleDisplaysShowTaskbarOnAllBtn
+            // 
+            this.multipleDisplaysShowTaskbarOnAllBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.multipleDisplaysShowTaskbarOnAllBtn.BackColor = System.Drawing.Color.Transparent;
+            this.multipleDisplaysShowTaskbarOnAllBtn.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.switchOffState;
+            this.multipleDisplaysShowTaskbarOnAllBtn.FlatAppearance.BorderSize = 0;
+            this.multipleDisplaysShowTaskbarOnAllBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.multipleDisplaysShowTaskbarOnAllBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.multipleDisplaysShowTaskbarOnAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.multipleDisplaysShowTaskbarOnAllBtn.Location = new System.Drawing.Point(886, 23);
+            this.multipleDisplaysShowTaskbarOnAllBtn.Name = "multipleDisplaysShowTaskbarOnAllBtn";
+            this.multipleDisplaysShowTaskbarOnAllBtn.Size = new System.Drawing.Size(40, 20);
+            this.multipleDisplaysShowTaskbarOnAllBtn.TabIndex = 9;
+            this.multipleDisplaysShowTaskbarOnAllBtn.TabStop = false;
+            this.multipleDisplaysShowTaskbarOnAllBtn.UseVisualStyleBackColor = false;
+            this.multipleDisplaysShowTaskbarOnAllBtn.Click += new System.EventHandler(this.multipleDisplaysShowTaskbarOnAllBtn_Click);
+            // 
+            // multipleDisplaysShowTaskbarOnAllLbl
+            // 
+            this.multipleDisplaysShowTaskbarOnAllLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.multipleDisplaysShowTaskbarOnAllLbl.AutoSize = true;
+            this.multipleDisplaysShowTaskbarOnAllLbl.BackColor = System.Drawing.Color.Transparent;
+            this.multipleDisplaysShowTaskbarOnAllLbl.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.multipleDisplaysShowTaskbarOnAllLbl.Location = new System.Drawing.Point(851, 24);
+            this.multipleDisplaysShowTaskbarOnAllLbl.Name = "multipleDisplaysShowTaskbarOnAllLbl";
+            this.multipleDisplaysShowTaskbarOnAllLbl.Size = new System.Drawing.Size(26, 17);
+            this.multipleDisplaysShowTaskbarOnAllLbl.TabIndex = 8;
+            this.multipleDisplaysShowTaskbarOnAllLbl.Text = "Off";
+            // 
+            // mmTaskbarShowButtonsOnPanel
+            // 
+            this.mmTaskbarShowButtonsOnPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mmTaskbarShowButtonsOnPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mmTaskbarShowButtonsOnPanel.Controls.Add(this.multipleDisplaysShowButtonsOnComboBox);
+            this.mmTaskbarShowButtonsOnPanel.Controls.Add(this.label106);
+            this.mmTaskbarShowButtonsOnPanel.Location = new System.Drawing.Point(0, 134);
+            this.mmTaskbarShowButtonsOnPanel.Name = "mmTaskbarShowButtonsOnPanel";
+            this.mmTaskbarShowButtonsOnPanel.Size = new System.Drawing.Size(978, 66);
+            this.mmTaskbarShowButtonsOnPanel.TabIndex = 11;
+            this.mmTaskbarShowButtonsOnPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            // 
+            // multipleDisplaysShowButtonsOnComboBox
+            // 
+            this.multipleDisplaysShowButtonsOnComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.multipleDisplaysShowButtonsOnComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.multipleDisplaysShowButtonsOnComboBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.multipleDisplaysShowButtonsOnComboBox.FormattingEnabled = true;
+            this.multipleDisplaysShowButtonsOnComboBox.Items.AddRange(new object[] {
+            "All taskbars",
+            "Main taskbar and taskbar where window is open",
+            "Taskbar where window is open"});
+            this.multipleDisplaysShowButtonsOnComboBox.Location = new System.Drawing.Point(624, 21);
+            this.multipleDisplaysShowButtonsOnComboBox.Name = "multipleDisplaysShowButtonsOnComboBox";
+            this.multipleDisplaysShowButtonsOnComboBox.Size = new System.Drawing.Size(302, 25);
+            this.multipleDisplaysShowButtonsOnComboBox.TabIndex = 8;
+            this.multipleDisplaysShowButtonsOnComboBox.SelectedIndexChanged += new System.EventHandler(this.multipleDisplaysShowButtonsOnComboBox_SelectedIndexChanged);
+            this.multipleDisplaysShowButtonsOnComboBox.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.comboBox_MouseWheel);
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.BackColor = System.Drawing.Color.Transparent;
+            this.label106.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label106.Location = new System.Drawing.Point(43, 24);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(162, 17);
+            this.label106.TabIndex = 7;
+            this.label106.Text = "Show taskbar buttons on";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.BackColor = System.Drawing.Color.Transparent;
+            this.label107.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label107.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label107.Location = new System.Drawing.Point(19, 36);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(301, 15);
+            this.label107.TabIndex = 6;
+            this.label107.Text = "Taskbar behavior options when multiple displays are used";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.BackColor = System.Drawing.Color.Transparent;
+            this.label108.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label108.Location = new System.Drawing.Point(19, 19);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(109, 17);
+            this.label108.TabIndex = 5;
+            this.label108.Text = "Multiple displays";
             // 
             // behaviorsPanel
             // 
@@ -3050,21 +3257,6 @@ namespace TaskbarAdvancedSettings
             this.label7.TabIndex = 8;
             this.label7.Text = " ";
             // 
-            // uninstallTool
-            // 
-            this.uninstallTool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uninstallTool.AutoSize = true;
-            this.uninstallTool.BackColor = System.Drawing.Color.Transparent;
-            this.uninstallTool.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uninstallTool.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uninstallTool.ForeColor = System.Drawing.Color.Firebrick;
-            this.uninstallTool.Location = new System.Drawing.Point(814, 54);
-            this.uninstallTool.Name = "uninstallTool";
-            this.uninstallTool.Size = new System.Drawing.Size(112, 17);
-            this.uninstallTool.TabIndex = 17;
-            this.uninstallTool.Text = "Uninstall the tool";
-            this.uninstallTool.Click += new System.EventHandler(this.uninstallTool_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3202,6 +3394,14 @@ namespace TaskbarAdvancedSettings
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.taskbarSettingsPanel.ResumeLayout(false);
             this.taskbarSettingsPanel.PerformLayout();
+            this.multipleDisplaysPanel.ResumeLayout(false);
+            this.multipleDisplaysPanel.PerformLayout();
+            this.mmTaskbarCombineButtonsPanel.ResumeLayout(false);
+            this.mmTaskbarCombineButtonsPanel.PerformLayout();
+            this.mmTaskbarShowOnAllPanel.ResumeLayout(false);
+            this.mmTaskbarShowOnAllPanel.PerformLayout();
+            this.mmTaskbarShowButtonsOnPanel.ResumeLayout(false);
+            this.mmTaskbarShowButtonsOnPanel.PerformLayout();
             this.behaviorsPanel.ResumeLayout(false);
             this.behaviorsPanel.PerformLayout();
             this.behaviorsPanelTaskbarLocation.ResumeLayout(false);
@@ -3456,6 +3656,19 @@ namespace TaskbarAdvancedSettings
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label uninstallTool;
+        private System.Windows.Forms.Panel multipleDisplaysPanel;
+        private System.Windows.Forms.Panel mmTaskbarCombineButtonsPanel;
+        private System.Windows.Forms.ComboBox multipleDisplaysCombineButtonsComboBox;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Panel mmTaskbarShowOnAllPanel;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Button multipleDisplaysShowTaskbarOnAllBtn;
+        private System.Windows.Forms.Label multipleDisplaysShowTaskbarOnAllLbl;
+        private System.Windows.Forms.Panel mmTaskbarShowButtonsOnPanel;
+        private System.Windows.Forms.ComboBox multipleDisplaysShowButtonsOnComboBox;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label108;
     }
 }
 
