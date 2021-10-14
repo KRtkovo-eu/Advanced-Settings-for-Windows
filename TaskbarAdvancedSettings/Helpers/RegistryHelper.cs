@@ -37,6 +37,8 @@ namespace TaskbarAdvancedSettings.Helpers
         public static RegistryKeyValue AdvSettingsFirstRunRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "FirstRunDone");
         public static RegistryKeyValue AdvSettingsInstallLocationRegPath = new RegistryKeyValue(Registry.LocalMachine, @"Software\KRtkovo.eu\Advanced Settings for Windows", "InstallLocation");
         public static RegistryKeyValue EnvironmentUserPATHregPath = new RegistryKeyValue(Registry.CurrentUser, @"Environment", "Path");
+        public static RegistryKeyValue ForceStartInLegacyOnStartupRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Run", "Force Start menu in Legacy taskbar");
+        public static RegistryKeyValue ForceStartInLegacyOnStartupControlRegPath = new RegistryKeyValue(Registry.CurrentUser, @"Software\KRtkovo.eu\Advanced Settings for Windows", "Force Start menu in Legacy taskbar");
 
 
         public static T Read<T>(RegistryKeyValue regPath)

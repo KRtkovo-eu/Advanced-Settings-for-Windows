@@ -21,7 +21,7 @@ namespace TaskbarAdvancedSettings
         private WindowsHelper.TaskbarPosition currentTaskbarPosition;
         private bool advSettingsInContextMenu;
         private bool runningWindowsLegacy = false; //false = Windows 11, true = Windows 10, Server 2016-2022
-        private bool formShown, runOnce = false;
+        private bool formShown, runOnce, forceNewStartInLegacy = false;
         private object currentContextMenu;
 
         public const string DefaultToolLocation = "C:\\Users\\All Users\\KRtkovo.eu\\Advanced Settings for Windows";
@@ -99,7 +99,7 @@ namespace TaskbarAdvancedSettings
             multipleDisplaysCombineButtonsComboBox.SelectedIndex = mmTaskbarCombineButtons;
             mmTaskbarShowButtonsOn = RegistryHelper.Read<int>(RegistryHelper.MMTaskbarShowButtonsRegPath);
             multipleDisplaysShowButtonsOnComboBox.SelectedIndex = mmTaskbarShowButtonsOn;
-
+            forceNewStartInLegacy = GetCurrentForceNewStartMenuInLegacy();
 
             // Visual things on load
             GraphicsPath gp = new GraphicsPath();
@@ -211,7 +211,9 @@ namespace TaskbarAdvancedSettings
                 taskbarStyle_btn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOnStateDisabled : Properties.Resources.switchOnState;
                 pictureBox1.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
 
+                startMenuSunValleyPanel.Enabled = false;
                 startMenuSunValleyLbl.Text = "On";
+                startMenuSunValleyPictureBox.BackgroundImage = Properties.Resources.winDisabled;
                 startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOnStateDisabled;
 
                 legacyTaskbarLbl.Text = "Off";
@@ -262,8 +264,10 @@ namespace TaskbarAdvancedSettings
                 taskbarStyle_btn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOffStateDisabled : Properties.Resources.switchOffState;
                 pictureBox1.BackgroundImage = runningWindowsLegacy ? Properties.Resources.winDisabled : Properties.Resources.win;
 
+                startMenuSunValleyPanel.Enabled = true;
                 startMenuSunValleyLbl.Text = "Off";
-                startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOffStateDisabled;
+                startMenuSunValleyPictureBox.BackgroundImage = Properties.Resources.win;
+                startMenuSunValleyBtn.BackgroundImage = Properties.Resources.switchOffState;
 
                 legacyTaskbarLbl.Text = "On";
                 legacyTaskbarBtn.BackgroundImage = runningWindowsLegacy ? Properties.Resources.switchOnStateDisabled : Properties.Resources.switchOnState;
@@ -296,6 +300,14 @@ namespace TaskbarAdvancedSettings
                 string[] posAv = { "Left", "Top", "Right", "Bottom" };
                 taskbarPositionComboBox.Items.AddRange(posAv);
                 taskbarPositionComboBox.SelectedIndex = (int)currentTaskbarPosition;
+            }
+
+            // Reset trick with the pointed hat
+            if(formShown)
+            {
+                forceNewStartInLegacy = false;
+                RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupRegPath);
+                RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupControlRegPath);
             }
 
             return CurrentTaskbarStyle;
@@ -775,6 +787,23 @@ namespace TaskbarAdvancedSettings
             return current;
         }
 
+        private bool GetCurrentForceNewStartMenuInLegacy()
+        {
+            var result = RegistryHelper.Read<int>(RegistryHelper.ForceStartInLegacyOnStartupControlRegPath) == 0 ? false : true;
+
+            if(result)
+            {
+                startMenuSunValleyLbl.Text = "On";
+                startMenuSunValleyBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOnState : Properties.Resources.switchOnStateDisabled;
+            }
+            else
+            {
+                startMenuSunValleyLbl.Text = "Off";
+                startMenuSunValleyBtn.BackgroundImage = (currentTaskbarStyle == TaskbarStyle.Legacy) ? Properties.Resources.switchOffState : Properties.Resources.switchOffStateDisabled;
+            }
+            return result;
+        }
+
         private void label47_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/dremin/RetroBar/releases/latest");
@@ -911,6 +940,40 @@ namespace TaskbarAdvancedSettings
             }
         }
 
+        private void startMenuSunValleyBtn_Click(object sender, EventArgs e)
+        {
+            if (formShown)
+            {
+                if(forceNewStartInLegacy == false)
+                {
+                    // Trick with the pointed hat - to show new Start menu on Legacy taskbar simply switch UndockingDisabled to 1, restart explorer.exe, switch UndockingDisabled to 0, click on Start menu, switch UndockingDisabled to 1
+                    //if (runOnce)
+                    //{
+                    //    MessageBox.Show("Install this tool to prevent Start menu from disappearing when explorer.exe is restarted.");
+                    //}
+                    //else
+                    //{
+                    //    RegistryHelper.Write(RegistryHelper.ForceStartInLegacyOnStartupRegPath, $"\"{DefaultToolLocation}\\{DefaultToolExeName}\" --ForceNewStartInLegacy", Microsoft.Win32.RegistryValueKind.String);
+                    //}
+                    MessageBox.Show("Start menu will disappear after explorer.exe is restarted." + Environment.NewLine + Environment.NewLine + "To show the Start menu again, switch to Sun Valley taskbar style," + Environment.NewLine + "click on Start button, then switch to Legacy taskbar style" + Environment.NewLine + "and enable this option.");
+                    RegistryHelper.Write(RegistryHelper.ForceStartInLegacyOnStartupControlRegPath, 1);
+                    RegistryHelper.Write(RegistryHelper.TaskbarStyleSwitchRegPath, 0);
+                    System.Threading.Thread.Sleep(100);
+                    WindowsHelper.ShowStartMenu();
+                    System.Threading.Thread.Sleep(100);
+                    RegistryHelper.Write(RegistryHelper.TaskbarStyleSwitchRegPath, 1);
+                }
+                else
+                {
+                    RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupControlRegPath);
+                    RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupRegPath);
+                    WindowsHelper.RestartLegacyExplorer();
+                }
+
+                forceNewStartInLegacy = GetCurrentForceNewStartMenuInLegacy();
+            }
+        }
+
         private void uninstallTool_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Do you really want to hurt me?" + Environment.NewLine + "Do you really want to make me cry?" + Environment.NewLine + Environment.NewLine + "Do you really want to uninstall this tool?", "Are you sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -918,6 +981,8 @@ namespace TaskbarAdvancedSettings
                 AddRemoveToolContextMenu(true);
 
                 RegistryHelper.Delete(RegistryHelper.AdvSettingsFirstRunRegPath);
+                RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupRegPath);
+                RegistryHelper.Delete(RegistryHelper.ForceStartInLegacyOnStartupControlRegPath);
                 RegistryHelper.Delete(RegistryHelper.AdvSettingsInstallLocationRegPath, true);
 
                 Directory.Delete(DefaultToolLocation, true);

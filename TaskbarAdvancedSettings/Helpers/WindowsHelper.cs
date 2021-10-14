@@ -46,7 +46,7 @@ namespace TaskbarAdvancedSettings.Helpers
             // Restart explorer.exe
 #if !DEBUG
             Process.Start(@"taskkill.exe", @"/F /IM explorer.exe");
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(2000);
             Process.Start("explorer.exe");
 #endif
         }
@@ -195,7 +195,8 @@ namespace TaskbarAdvancedSettings.Helpers
 
         public static void ShowStartMenu()
         {
-            Task.Run(() => SendMessageTimeout(HWND_BROADCAST, WM_SYSCOMMAND, new IntPtr(SC_TASKLIST), null, 0, 0, IntPtr.Zero));
+            //Task.Run(() => SendMessageTimeout(HWND_BROADCAST, WM_SYSCOMMAND, new IntPtr(SC_TASKLIST), null, 0, 0, IntPtr.Zero));
+            System.Windows.Forms.SendKeys.SendWait("^{ESC}");
         }
 
         public struct WebBrowserInfo

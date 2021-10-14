@@ -193,10 +193,10 @@ namespace TaskbarAdvancedSettings
             this.legacyStartMenuLbl = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
+            this.startMenuSunValleyPanel = new System.Windows.Forms.Panel();
             this.startMenuSunValleyBtn = new System.Windows.Forms.Button();
             this.startMenuSunValleyLbl = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.startMenuSunValleyPictureBox = new System.Windows.Forms.PictureBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -331,8 +331,8 @@ namespace TaskbarAdvancedSettings
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.startMenuSunValleyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startMenuSunValleyPictureBox)).BeginInit();
             this.taskbarSettingsPanel.SuspendLayout();
             this.multipleDisplaysPanel.SuspendLayout();
             this.mmTaskbarCombineButtonsPanel.SuspendLayout();
@@ -2241,7 +2241,7 @@ namespace TaskbarAdvancedSettings
             this.startMenuPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.startMenuPanel.Controls.Add(this.panel30);
             this.startMenuPanel.Controls.Add(this.panel27);
-            this.startMenuPanel.Controls.Add(this.panel26);
+            this.startMenuPanel.Controls.Add(this.startMenuSunValleyPanel);
             this.startMenuPanel.Controls.Add(this.label9);
             this.startMenuPanel.Controls.Add(this.label12);
             this.startMenuPanel.Location = new System.Drawing.Point(20, 62);
@@ -2355,20 +2355,20 @@ namespace TaskbarAdvancedSettings
             this.label57.TabIndex = 7;
             this.label57.Text = "Windows legacy";
             // 
-            // panel26
+            // startMenuSunValleyPanel
             // 
-            this.panel26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.startMenuSunValleyPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel26.Controls.Add(this.startMenuSunValleyBtn);
-            this.panel26.Controls.Add(this.startMenuSunValleyLbl);
-            this.panel26.Controls.Add(this.pictureBox11);
-            this.panel26.Controls.Add(this.label53);
-            this.panel26.Enabled = false;
-            this.panel26.Location = new System.Drawing.Point(0, 70);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(978, 66);
-            this.panel26.TabIndex = 13;
-            this.panel26.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
+            this.startMenuSunValleyPanel.Controls.Add(this.startMenuSunValleyBtn);
+            this.startMenuSunValleyPanel.Controls.Add(this.startMenuSunValleyLbl);
+            this.startMenuSunValleyPanel.Controls.Add(this.startMenuSunValleyPictureBox);
+            this.startMenuSunValleyPanel.Controls.Add(this.label53);
+            this.startMenuSunValleyPanel.Enabled = false;
+            this.startMenuSunValleyPanel.Location = new System.Drawing.Point(0, 70);
+            this.startMenuSunValleyPanel.Name = "startMenuSunValleyPanel";
+            this.startMenuSunValleyPanel.Size = new System.Drawing.Size(978, 66);
+            this.startMenuSunValleyPanel.TabIndex = 13;
+            this.startMenuSunValleyPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanelBorder);
             // 
             // startMenuSunValleyBtn
             // 
@@ -2385,6 +2385,7 @@ namespace TaskbarAdvancedSettings
             this.startMenuSunValleyBtn.TabIndex = 12;
             this.startMenuSunValleyBtn.TabStop = false;
             this.startMenuSunValleyBtn.UseVisualStyleBackColor = false;
+            this.startMenuSunValleyBtn.Click += new System.EventHandler(this.startMenuSunValleyBtn_Click);
             // 
             // startMenuSunValleyLbl
             // 
@@ -2398,16 +2399,16 @@ namespace TaskbarAdvancedSettings
             this.startMenuSunValleyLbl.TabIndex = 11;
             this.startMenuSunValleyLbl.Text = "Off";
             // 
-            // pictureBox11
+            // startMenuSunValleyPictureBox
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winDisabled;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox11.Location = new System.Drawing.Point(46, 23);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
+            this.startMenuSunValleyPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.startMenuSunValleyPictureBox.BackgroundImage = global::TaskbarAdvancedSettings.Properties.Resources.winDisabled;
+            this.startMenuSunValleyPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.startMenuSunValleyPictureBox.Location = new System.Drawing.Point(46, 23);
+            this.startMenuSunValleyPictureBox.Name = "startMenuSunValleyPictureBox";
+            this.startMenuSunValleyPictureBox.Size = new System.Drawing.Size(21, 21);
+            this.startMenuSunValleyPictureBox.TabIndex = 10;
+            this.startMenuSunValleyPictureBox.TabStop = false;
             // 
             // label53
             // 
@@ -3389,9 +3390,9 @@ namespace TaskbarAdvancedSettings
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.startMenuSunValleyPanel.ResumeLayout(false);
+            this.startMenuSunValleyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startMenuSunValleyPictureBox)).EndInit();
             this.taskbarSettingsPanel.ResumeLayout(false);
             this.taskbarSettingsPanel.PerformLayout();
             this.multipleDisplaysPanel.ResumeLayout(false);
@@ -3541,10 +3542,10 @@ namespace TaskbarAdvancedSettings
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel startMenuSunValleyPanel;
         private System.Windows.Forms.Button startMenuSunValleyBtn;
         private System.Windows.Forms.Label startMenuSunValleyLbl;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox startMenuSunValleyPictureBox;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Panel panel27;
