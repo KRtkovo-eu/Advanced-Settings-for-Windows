@@ -26,3 +26,9 @@ Grab the latest EXE release: https://github.com/KRtkovo-eu/Advanced-Settings-for
 
 ## Missing some other Windows legacy options?
 Simply create issue task with "feature request" label and provide all known informations (what the missing feature is, registry value to change etc.)
+
+
+## Author of the project
+Ondřej Kotas, Brno, CZ
+https://krtkovo.eu/
+this project is open source published under GNU GPL v3 license
