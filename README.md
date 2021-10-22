@@ -30,5 +30,5 @@ Simply create issue task with "feature request" label and provide all known info
 
 ## Author of the project
 Ondřej Kotas, Brno, CZ    
-https://krtkovo.eu/    
+ok@krtkovo.eu    
 this project is open source published under GNU GPL v3 license
